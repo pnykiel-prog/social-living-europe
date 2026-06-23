@@ -513,45 +513,21 @@ select {
   color: #fff;
 }
 
-/* ---------- Współpraca: nakładające się karty (magazynowy overlap) ---------- */
-.coop-feature {
+/* ---------- Współpraca: układ porównawczy z centralnym zdjęciem ---------- */
+.coop-compare {
+  display: grid;
+  grid-template-columns: 1fr clamp(260px, 26vw, 350px) 1fr;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+.coop-photo {
   position: relative;
-  margin-bottom: clamp(34px, 5vw, 56px);
-}
-.coop-feature-card {
-  position: relative;
-  z-index: 2;
-  width: 62%;
-  max-width: 640px;
-  margin-top: -88px;
-  margin-left: auto; /* domyślnie karta po prawej */
-  background: #fff;
-  border-top: 4px solid var(--gold);
-  border-radius: 8px;
-  box-shadow: 0 34px 80px -44px rgba(1, 30, 22, 0.6);
-  padding: clamp(28px, 3.6vw, 44px);
-}
-.coop-feature.left .coop-feature-card {
-  margin-left: 0; /* wariant z kartą po lewej */
-  margin-right: auto;
-}
-/* wkomponowane drugie zdjęcie wypełniające róg po przeciwnej stronie karty */
-.coop-feature-img2 {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 0; /* domyślnie karta po prawej → zdjęcie w lewym dolnym rogu */
-  width: 38%;
-  height: clamp(230px, 30vw, 360px);
+  width: 100%;
+  aspect-ratio: 4 / 5;
   border-radius: 8px;
   overflow: hidden;
   background: linear-gradient(120deg, #0a4632, #0d6346);
-  border: 6px solid #fff;
-  box-shadow: 0 30px 70px -42px rgba(1, 30, 22, 0.65);
-}
-.coop-feature.left .coop-feature-img2 {
-  left: auto;
-  right: 0; /* karta po lewej → zdjęcie w prawym dolnym rogu */
+  box-shadow: 0 30px 70px -42px rgba(1, 30, 22, 0.55);
 }
 
 /* ---------- Responsive ---------- */
@@ -629,18 +605,24 @@ select {
   }
 }
 
+/* Stack the Współpraca comparison layout: image on top, then both text columns */
+@media (max-width: 900px) {
+  .coop-compare {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .coop-photo {
+    order: -1;
+    aspect-ratio: 16 / 10;
+    max-height: 440px;
+  }
+}
+
 /* Small tablet: collapse paired content columns */
 @media (max-width: 760px) {
   .grid-2 {
     grid-template-columns: 1fr !important;
-  }
-  .coop-feature-card {
-    width: 100%;
-    max-width: none;
-    margin-top: -44px;
-  }
-  .coop-feature-img2 {
-    display: none; /* brak pustej przestrzeni przy karcie na pełną szerokość */
   }
 }
 

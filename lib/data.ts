@@ -394,7 +394,6 @@ export type CoopArea = {
   kicker: string;
   title: string;
   img: string;
-  img2: string;
   intro: string;
   services: { t: string; d: string }[];
 };
@@ -406,7 +405,6 @@ export const coop: CoopArea[] = [
     kicker: "Sektor prywatny",
     title: "Twoja inwestycja. Nasz model. Publiczne finansowanie.",
     img: img("1486406146926-c627a92ad1ab", 1000, 800),
-    img2: img("1554224155-6726b3ff858f", 700, 820),
     intro:
       "Deweloperzy, fundusze nieruchomości i firmy budowlane rzadko myślą o budownictwie społecznym jako o naturalnym rynku dla swoich projektów — zazwyczaj dlatego, że nie wiedzą, że regulowane czynsze, kredyt BGK i granty gminne mogą razem stworzyć model finansowy lepszy niż sprzedaż detaliczna. Szczególnie gdy projekt utknął, rynek się schłodził lub portfel mieszkań czeka na kupca, którego nie ma. Przeprowadzamy inwestora przez całą ścieżkę: od pierwszej analizy po uruchomienie operacyjne.",
     services: [
@@ -430,7 +428,6 @@ export const coop: CoopArea[] = [
     kicker: "Samorządy",
     title: "Zapotrzebowanie znasz. My wiemy, jak je zaspokoić — i jak za to zapłacić.",
     img: img("1487958449943-2429e8be8625", 1000, 800),
-    img2: img("1521737604893-d14cc237f11d", 700, 820),
     intro:
       "Gminy borykają się z tym samym problemem od lat: środki publiczne na budownictwo mieszkaniowe są dostępne, ale brakuje gotowych projektów, kompetencji operacyjnych i czasu urzędników, żeby sprawnie przeprowadzić inwestycję od pomysłu do oddania kluczy. My rozwiązujemy dokładnie ten problem.",
     services: [
@@ -454,7 +451,6 @@ export const coop: CoopArea[] = [
     kicker: "Duzi pracodawcy",
     title: "Pracownik bez mieszkania nie przyjedzie. Pracownik z mieszkaniem zostaje.",
     img: img("1497366216548-37526070297c", 1000, 800),
-    img2: img("1560448204-e02f11c3d0e2", 700, 820),
     intro:
       "Niedobory kadrowe w polskich zakładach pracy mają coraz częściej charakter nie płacowy, lecz infrastrukturalny. Szczególnie dotyczy to pracodawców zlokalizowanych poza dużymi aglomeracjami, w miejscowościach, gdzie rynek najmu prywatnego jest płytki lub nieistniejący. Mieszkanie staje się benefitem decydującym o tym, czy pracownik podejmie zatrudnienie i jak długo zostanie. Budujemy programy mieszkaniowe dla pracodawców od analizy potrzeb po oddanie kluczy — we współpracy z lokalną gminą i z dostępem do finansowania publicznego.",
     services: [
@@ -478,7 +474,6 @@ export const coop: CoopArea[] = [
     kicker: "Instytucje finansowe z impaktem społecznym",
     title: "Gotowe projekty. Certyfikowany impakt. Bezpieczna ekspozycja na polskim rynku.",
     img: img("1551836022-d5d88e9218df", 1000, 800),
-    img2: img("1454165804606-c3d57bc86b40", 700, 820),
     intro:
       "Fundusze impact investing, instytucje finansowe z mandatem ESG i podmioty wdrażające strategię CSRD szukają w Polsce ekspozycji na affordable housing — ale rzadko mają zasoby operacyjne, żeby samodzielnie identyfikować, strukturyzować i uruchamiać projekty zgodne z ich mandatem. SLE PSA jest tym zasobem.",
     services: [
@@ -502,7 +497,6 @@ export const coop: CoopArea[] = [
     kicker: "Organizacje pozarządowe i sektor społeczny",
     title: "Budownictwo społeczne potrzebuje wiedzy, sieci i głosu. NGO ma wszystkie trzy.",
     img: img("1517048676732-d65bc937f952", 1000, 800),
-    img2: img("1545324418-cc1a3fa10c00", 700, 820),
     intro:
       "Organizacje pozarządowe działające w obszarze mieszkalnictwa, wykluczenia społecznego, polityki senioralnej i rynku pracy mają coś, czego brakuje sektorowi prywatnemu: zaufanie społeczności lokalnych, dostęp do grup docelowych i zdolność do rzecznictwa. SLE PSA chce budować z NGO partnerstwo, które zamienia tę przewagę w konkretne projekty mieszkaniowe.",
     services: [

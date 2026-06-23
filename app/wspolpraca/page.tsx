@@ -86,85 +86,46 @@ export default function Wspolpraca() {
       <section style={{ padding: "40px 0 90px" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column" }}>
           {coop.map((co) => (
-            <div key={co.no} style={{ padding: "96px 0", borderTop: "1px solid var(--border-2)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 36 }}>
-                <div
-                  className="serif"
-                  style={{
-                    fontSize: "clamp(15px,1.5vw,19px)",
-                    fontWeight: 600,
-                    color: "#fff",
-                    background: "var(--brand)",
-                    borderRadius: 100,
-                    width: 46,
-                    height: 46,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flex: "none",
-                  }}
-                >
-                  {co.no}
+            <div key={co.no} style={{ padding: "clamp(58px,7vw,96px) 0", borderTop: "1px solid var(--border-2)" }}>
+              {/* nagłówek kategorii — wyśrodkowany */}
+              <div style={{ textAlign: "center", maxWidth: 900, margin: "0 auto clamp(36px,5vw,58px)" }}>
+                <div style={{ fontSize: 13, letterSpacing: "3px", textTransform: "uppercase", color: "var(--gold-dark)", fontWeight: 700, marginBottom: 14 }}>
+                  Obszar {co.no}
                 </div>
-                <div className="serif" style={{ fontWeight: 600, fontSize: "clamp(24px,3vw,36px)", color: "var(--dark)", lineHeight: 1.1 }}>
+                <h2 className="serif" style={{ fontWeight: 600, fontSize: "clamp(26px,3.4vw,44px)", color: "var(--dark)", lineHeight: 1.1, margin: 0 }}>
                   {co.kicker}
-                </div>
-                <div style={{ flex: 1, height: 3, background: "var(--gold)", borderRadius: 2, minWidth: 30 }} />
+                </h2>
+                <div style={{ height: 3, width: 60, background: "var(--gold)", borderRadius: 2, margin: "20px auto 0" }} />
               </div>
-              <div className={`coop-feature${co.dir === "row-reverse" ? " left" : ""}`}>
-                <div
-                  className="coop-feature-img"
-                  style={{
-                    position: "relative",
-                    height: "clamp(320px,44vw,520px)",
-                    borderRadius: 8,
-                    overflow: "hidden",
-                    background: "linear-gradient(120deg,#0a4632,#0d6346)",
-                  }}
-                >
+
+              {/* układ porównawczy: kontekst | zdjęcie | usługi */}
+              <div className="coop-compare">
+                <div>
+                  <h3 className="serif" style={{ fontWeight: 600, fontSize: "clamp(20px,2.2vw,27px)", lineHeight: 1.22, color: "var(--dark)", margin: "0 0 16px" }}>
+                    {co.title}
+                  </h3>
+                  <p style={{ fontSize: 15.5, lineHeight: 1.72, color: "var(--muted)", margin: 0 }}>{co.intro}</p>
+                </div>
+
+                <div className="coop-photo">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={co.img}
                     alt=""
                     style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
                   />
-                  <div
-                    style={{
-                      position: "absolute",
-                      inset: 0,
-                      background: "linear-gradient(180deg,rgba(1,30,22,0) 55%,rgba(1,30,22,.45) 100%)",
-                    }}
-                  />
                 </div>
-                <div className="coop-feature-img2" aria-hidden="true">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={co.img2}
-                    alt=""
-                    style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
-                  />
+
+                <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
+                  {co.services.map((sv) => (
+                    <div key={sv.t} style={{ borderLeft: "3px solid var(--gold-dark)", paddingLeft: 18 }}>
+                      <h4 className="serif" style={{ fontWeight: 600, fontSize: 17.5, color: "var(--dark)", margin: "0 0 8px", lineHeight: 1.28 }}>
+                        {sv.t}
+                      </h4>
+                      <p style={{ fontSize: 14.5, lineHeight: 1.62, color: "var(--muted-2)", margin: 0 }}>{sv.d}</p>
+                    </div>
+                  ))}
                 </div>
-                <div className="coop-feature-card">
-                  <h2 className="h2" style={{ fontSize: "clamp(25px,2.9vw,37px)", lineHeight: 1.14, color: "var(--dark)", margin: "0 0 16px" }}>
-                    {co.title}
-                  </h2>
-                  <div style={{ height: 2, width: 54, background: "var(--gold-dark)", margin: "0 0 18px" }} />
-                  <p style={{ fontSize: 15.5, lineHeight: 1.72, color: "var(--muted)", margin: 0 }}>{co.intro}</p>
-                </div>
-              </div>
-              <div className="grid-3" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
-                {co.services.map((sv) => (
-                  <div
-                    key={sv.t}
-                    className="card-hover"
-                    style={{ background: "var(--gray-bg)", borderTop: "3px solid var(--gold-dark)", borderRadius: 4, padding: "30px 28px" }}
-                  >
-                    <h3 className="serif" style={{ fontWeight: 500, fontSize: 19, color: "var(--dark)", margin: "0 0 14px", lineHeight: 1.28 }}>
-                      {sv.t}
-                    </h3>
-                    <p style={{ fontSize: 14.5, lineHeight: 1.65, color: "var(--muted-2)", margin: 0 }}>{sv.d}</p>
-                  </div>
-                ))}
               </div>
             </div>
           ))}

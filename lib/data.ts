@@ -522,7 +522,7 @@ export const roleOptions = ["Inwestor", "JST", "Fundusz / bank", "Inny"];
 
 export const photos = {
   imgWhat: "/assets/bud-osiedle-dziedziniec.jpg",
-  imgRevenue: "/assets/szkic-3d-wiezowce.jpg",
+  imgRevenue: "/assets/szkic-3d-wiezowce.png",
   ctaImg: "/assets/wsp-spotkanie-biuro.jpg",
   aboutHero: img("1486325212027-8081e485255e", 1600, 900),
   finHeroSide: "/assets/bud-wiezowiec-niebo.jpg",

@@ -450,16 +450,16 @@ export default function Home() {
             style={{
               position: "relative",
               height: 440,
-              borderRadius: 6,
-              overflow: "hidden",
-              background: "linear-gradient(120deg,#0a4632,#0d6346)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={photos.imgRevenue}
               alt=""
-              style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+              style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }}
             />
           </div>
         </div>

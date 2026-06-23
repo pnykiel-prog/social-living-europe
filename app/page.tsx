@@ -41,12 +41,14 @@ export default function Home() {
             poster="/assets/hero-poster.jpg"
             style={{
               position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%,-50%)",
+              minWidth: "100%",
+              minHeight: "100%",
+              width: "auto",
+              height: "auto",
               objectFit: "cover",
-              objectPosition: "center",
               opacity: 0.7,
             }}
           >

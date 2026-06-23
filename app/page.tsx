@@ -31,7 +31,7 @@ export default function Home() {
           muted
           loop
           playsInline
-          poster="/assets/hero-green.png"
+          poster="/assets/hero-poster.jpg"
           style={{
             position: "absolute",
             inset: 0,

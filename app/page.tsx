@@ -22,11 +22,7 @@ export default function Home() {
           minHeight: "86vh",
           display: "flex",
           alignItems: "center",
-          backgroundColor: "#01060d",
-          backgroundImage: "url('/assets/hero-poster.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          background: "#01060d",
           overflow: "hidden",
         }}
       >

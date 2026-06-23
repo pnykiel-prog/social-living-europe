@@ -116,80 +116,92 @@ export default function Modele() {
         </div>
       </section>
 
-      {/* PIĘĆ MODELI */}
-      <section style={{ padding: "10px 0 40px" }}>
-        <div className="container" style={{ display: "flex", flexDirection: "column" }}>
+      {/* PIĘĆ MODELI — karty z banerem zdjęcia */}
+      <section style={{ padding: "20px 0 40px" }}>
+        <div className="container" style={{ display: "flex", flexDirection: "column", gap: "clamp(40px,5vw,64px)" }}>
           {modelsFull.map((m) => (
-            <div key={m.num} style={{ padding: "90px 0", borderTop: "1px solid var(--border-2)" }}>
+            <article
+              key={m.num}
+              style={{
+                background: "#fff",
+                border: "1px solid var(--border-2)",
+                borderRadius: 10,
+                overflow: "hidden",
+                boxShadow: "0 22px 60px -38px rgba(1,30,22,.55)",
+              }}
+            >
+              {/* baner zdjęcia z numerem i tytułem */}
               <div
-                className="row-flex"
-                style={{ display: "flex", flexDirection: m.dir, gap: 54, alignItems: "center", marginBottom: 30 }}
+                style={{
+                  position: "relative",
+                  height: "clamp(250px,32vw,370px)",
+                  background: "linear-gradient(120deg,#0a4632,#0d6346)",
+                }}
               >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={m.img}
+                  alt=""
+                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                />
                 <div
                   style={{
-                    flex: 1,
-                    position: "relative",
-                    height: 380,
-                    borderRadius: 6,
-                    overflow: "hidden",
-                    background: "linear-gradient(120deg,#0a4632,#0d6346)",
+                    position: "absolute",
+                    inset: 0,
+                    background:
+                      "linear-gradient(180deg,rgba(1,30,22,.1) 0%,rgba(1,30,22,.32) 48%,rgba(1,30,22,.9) 100%)",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    padding: "clamp(24px,4vw,42px)",
+                    display: "flex",
+                    alignItems: "flex-end",
+                    gap: "clamp(16px,2.6vw,30px)",
                   }}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={m.img}
-                    alt=""
-                    style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
-                  />
-                  <div
-                    className="serif"
-                    style={{
-                      position: "absolute",
-                      left: 0,
-                      top: 28,
-                      background: "var(--gold)",
-                      color: "var(--dark)",
-                      fontSize: 22,
-                      fontWeight: 600,
-                      padding: "8px 18px",
-                      borderRadius: "0 4px 4px 0",
-                    }}
-                  >
+                  <div className="serif" style={{ fontSize: "clamp(46px,7vw,90px)", fontWeight: 600, color: "var(--gold)", lineHeight: 0.78 }}>
                     {m.num}
                   </div>
-                </div>
-                <div style={{ flex: 1.15 }}>
-                  <h2 className="h2" style={{ fontSize: "clamp(25px,2.9vw,37px)", lineHeight: 1.13, color: "var(--dark)", margin: "0 0 10px" }}>
-                    {m.title}
-                  </h2>
-                  <div style={{ height: 2, width: 54, background: "var(--gold-dark)", margin: "0 0 16px" }} />
-                  <p style={{ fontSize: 16, color: "#5e7269", margin: "0 0 18px", fontWeight: 500, fontStyle: "italic" }}>
-                    {m.subtitle}
-                  </p>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-                    {m.body.map((bp, i) => (
-                      <p key={i} style={{ fontSize: 15.5, lineHeight: 1.72, color: "var(--muted)", margin: 0 }}>
-                        {bp}
-                      </p>
-                    ))}
+                  <div>
+                    <h2 className="h2" style={{ fontSize: "clamp(24px,3vw,38px)", lineHeight: 1.08, color: "#fff", margin: "0 0 8px" }}>
+                      {m.title}
+                    </h2>
+                    <p style={{ fontSize: "clamp(14px,1.6vw,17px)", color: "var(--mint)", fontWeight: 500, fontStyle: "italic", margin: 0, lineHeight: 1.4 }}>
+                      {m.subtitle}
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className="grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
-                <div style={{ background: "#f1f6f2", borderLeft: "3px solid var(--pos)", borderRadius: "0 4px 4px 0", padding: "26px 28px" }}>
-                  <div style={{ fontSize: 12, letterSpacing: "1.5px", textTransform: "uppercase", color: "var(--pos)", fontWeight: 700, marginBottom: 10 }}>
-                    Co wnosimy
-                  </div>
-                  <p style={{ fontSize: 15, lineHeight: 1.68, color: "#3f4f49", margin: 0 }}>{m.provide}</p>
+              {/* treść karty */}
+              <div style={{ padding: "clamp(28px,4vw,48px)" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 14, maxWidth: 860, marginBottom: 34 }}>
+                  {m.body.map((bp, i) => (
+                    <p key={i} style={{ fontSize: 15.5, lineHeight: 1.72, color: "var(--muted)", margin: 0 }}>
+                      {bp}
+                    </p>
+                  ))}
                 </div>
-                <div style={{ background: "#faf6ee", borderLeft: "3px solid var(--gold-dark)", borderRadius: "0 4px 4px 0", padding: "26px 28px" }}>
-                  <div style={{ fontSize: 12, letterSpacing: "1.5px", textTransform: "uppercase", color: "var(--gold-dark)", fontWeight: 700, marginBottom: 10 }}>
-                    Kto powinien rozmawiać z nami o tym modelu
+                <div className="grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+                  <div style={{ background: "#f1f6f2", borderLeft: "3px solid var(--pos)", borderRadius: "0 4px 4px 0", padding: "26px 28px" }}>
+                    <div style={{ fontSize: 12, letterSpacing: "1.5px", textTransform: "uppercase", color: "var(--pos)", fontWeight: 700, marginBottom: 10 }}>
+                      Co wnosimy
+                    </div>
+                    <p style={{ fontSize: 15, lineHeight: 1.68, color: "#3f4f49", margin: 0 }}>{m.provide}</p>
                   </div>
-                  <p style={{ fontSize: 15, lineHeight: 1.68, color: "#3f4f49", margin: 0 }}>{m.who}</p>
+                  <div style={{ background: "#faf6ee", borderLeft: "3px solid var(--gold-dark)", borderRadius: "0 4px 4px 0", padding: "26px 28px" }}>
+                    <div style={{ fontSize: 12, letterSpacing: "1.5px", textTransform: "uppercase", color: "var(--gold-dark)", fontWeight: 700, marginBottom: 10 }}>
+                      Kto powinien rozmawiać z nami o tym modelu
+                    </div>
+                    <p style={{ fontSize: 15, lineHeight: 1.68, color: "#3f4f49", margin: 0 }}>{m.who}</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>

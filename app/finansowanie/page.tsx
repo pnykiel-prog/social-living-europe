@@ -84,7 +84,7 @@ export default function Finansowanie() {
         </div>
       </section>
 
-      {/* SZEŚĆ ŹRÓDEŁ */}
+      {/* SZEŚĆ ŹRÓDEŁ — indeks z numeracją i panelem zdjęcia */}
       <section style={{ padding: "30px 0 50px" }}>
         <div className="container" style={{ display: "flex", flexDirection: "column" }}>
           {finSources.map((fs) => (
@@ -93,69 +93,48 @@ export default function Finansowanie() {
               className="row-flex"
               style={{
                 display: "flex",
-                flexDirection: fs.dir,
-                gap: 54,
-                alignItems: "center",
-                padding: "84px 0",
+                flexDirection: "row",
+                gap: "clamp(30px,4vw,60px)",
+                alignItems: "flex-start",
+                padding: "clamp(52px,6vw,84px) 0",
                 borderTop: "1px solid var(--border-2)",
               }}
             >
-              <div
-                style={{
-                  flex: 1,
-                  position: "relative",
-                  height: 360,
-                  borderRadius: 6,
-                  overflow: "hidden",
-                  background: "linear-gradient(120deg,#0a4632,#0d6346)",
-                }}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={fs.img}
-                  alt=""
-                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
-                />
-                <div
-                  className="serif"
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    top: 26,
-                    background: "var(--gold)",
-                    color: "var(--dark)",
-                    fontSize: 21,
-                    fontWeight: 600,
-                    padding: "8px 18px",
-                    borderRadius: "0 4px 4px 0",
-                  }}
-                >
-                  {fs.num}
+              {/* treść z dużą liczbą porządkową */}
+              <div style={{ flex: 1.3 }}>
+                <div style={{ display: "flex", alignItems: "flex-start", gap: "clamp(16px,2.2vw,30px)", marginBottom: 22 }}>
+                  <span
+                    className="serif"
+                    aria-hidden="true"
+                    style={{ fontSize: "clamp(58px,8.5vw,118px)", fontWeight: 600, lineHeight: 0.74, color: "rgba(176,141,67,.26)", flex: "none" }}
+                  >
+                    {fs.num}
+                  </span>
+                  <div style={{ paddingTop: "clamp(4px,1vw,10px)" }}>
+                    <span
+                      style={{
+                        display: "inline-block",
+                        background: "var(--dark)",
+                        color: "var(--mint)",
+                        fontSize: 12,
+                        fontWeight: 700,
+                        letterSpacing: "0.6px",
+                        textTransform: "uppercase",
+                        padding: "6px 14px",
+                        borderRadius: 3,
+                        marginBottom: 14,
+                      }}
+                    >
+                      {fs.tag}
+                    </span>
+                    <h2 className="h2" style={{ fontSize: "clamp(24px,2.8vw,34px)", lineHeight: 1.13, color: "var(--dark)", margin: "0 0 8px" }}>
+                      {fs.title}
+                    </h2>
+                    <p style={{ fontSize: 16.5, color: "var(--gold-dark)", fontWeight: 600, margin: 0, lineHeight: 1.4 }}>
+                      {fs.headline}
+                    </p>
+                  </div>
                 </div>
-                <div
-                  style={{
-                    position: "absolute",
-                    left: 20,
-                    bottom: 20,
-                    background: "rgba(1,30,22,.85)",
-                    color: "#fff",
-                    fontSize: 13,
-                    fontWeight: 600,
-                    letterSpacing: "0.5px",
-                    padding: "8px 16px",
-                    borderRadius: 3,
-                  }}
-                >
-                  {fs.tag}
-                </div>
-              </div>
-              <div style={{ flex: 1.12 }}>
-                <h2 className="h2" style={{ fontSize: "clamp(24px,2.8vw,34px)", lineHeight: 1.15, color: "var(--dark)", margin: "0 0 10px" }}>
-                  {fs.title}
-                </h2>
-                <p style={{ fontSize: 16.5, color: "var(--gold-dark)", fontWeight: 600, margin: "0 0 18px", lineHeight: 1.4 }}>
-                  {fs.headline}
-                </p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 13, marginBottom: 22 }}>
                   {fs.body.map((bp, i) => (
                     <p key={i} style={{ fontSize: 15, lineHeight: 1.68, color: "var(--muted)", margin: 0 }}>
@@ -169,6 +148,24 @@ export default function Finansowanie() {
                   </div>
                   <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "#3f4f49", margin: 0 }}>{fs.forWho}</p>
                 </div>
+              </div>
+              {/* stały panel zdjęcia */}
+              <div
+                style={{
+                  flex: 1,
+                  position: "relative",
+                  height: "clamp(300px,38vw,440px)",
+                  borderRadius: 6,
+                  overflow: "hidden",
+                  background: "linear-gradient(120deg,#0a4632,#0d6346)",
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={fs.img}
+                  alt=""
+                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                />
               </div>
             </div>
           ))}

@@ -111,16 +111,13 @@ export default function Wspolpraca() {
                 </div>
                 <div style={{ flex: 1, height: 3, background: "var(--gold)", borderRadius: 2, minWidth: 30 }} />
               </div>
-              <div
-                className="row-flex"
-                style={{ display: "flex", flexDirection: co.dir, gap: 54, alignItems: "center", marginBottom: 34 }}
-              >
+              <div className={`coop-feature${co.dir === "row-reverse" ? " left" : ""}`}>
                 <div
+                  className="coop-feature-img"
                   style={{
-                    flex: 1,
                     position: "relative",
-                    height: 360,
-                    borderRadius: 6,
+                    height: "clamp(320px,44vw,520px)",
+                    borderRadius: 8,
                     overflow: "hidden",
                     background: "linear-gradient(120deg,#0a4632,#0d6346)",
                   }}
@@ -131,8 +128,15 @@ export default function Wspolpraca() {
                     alt=""
                     style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
                   />
+                  <div
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background: "linear-gradient(180deg,rgba(1,30,22,0) 55%,rgba(1,30,22,.45) 100%)",
+                    }}
+                  />
                 </div>
-                <div style={{ flex: 1.12 }}>
+                <div className="coop-feature-card">
                   <h2 className="h2" style={{ fontSize: "clamp(25px,2.9vw,37px)", lineHeight: 1.14, color: "var(--dark)", margin: "0 0 16px" }}>
                     {co.title}
                   </h2>

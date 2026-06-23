@@ -561,7 +561,7 @@ select {
   background: var(--dark);
   border-left: 4px solid var(--gold);
   border-radius: 8px;
-  padding: clamp(26px, 3vw, 38px);
+  padding: clamp(20px, 2.2vw, 28px);
 }
 .coop-photo {
   grid-area: photo;

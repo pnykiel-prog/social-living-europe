@@ -128,10 +128,10 @@ export default function Wspolpraca() {
                 </div>
 
                 <div className="coop-stat">
-                  <div className="serif" style={{ fontSize: "clamp(38px,5vw,60px)", fontWeight: 600, color: "var(--gold)", lineHeight: 1, marginBottom: 14 }}>
+                  <div className="serif" style={{ fontSize: "clamp(30px,4vw,46px)", fontWeight: 600, color: "var(--gold)", lineHeight: 1, marginBottom: 10 }}>
                     {co.stat.value}
                   </div>
-                  <p style={{ fontSize: 15, lineHeight: 1.62, color: "rgba(255,255,255,.85)", margin: 0 }}>{co.stat.text}</p>
+                  <p style={{ fontSize: 14, lineHeight: 1.58, color: "rgba(255,255,255,.85)", margin: 0 }}>{co.stat.text}</p>
                 </div>
               </div>
             </div>

@@ -586,7 +586,7 @@ export const faqFinansowanie: FaqItem[] = [
   },
   {
     q: "Ile wynosi kredyt BGK i na jakich warunkach?",
-    a: "Preferencyjny kredyt BGK pokrywa do 80% kosztów przedsięwzięcia, jest oprocentowany na poziomie WIBOR 3M bez marży ze stabilizacją na poziomie 2% rocznie na okres 5 lat i udzielany na budowę lokali mieszkalnych na wynajem z limitowaną stawką czynszu.",
+    a: "Preferencyjny kredyt BGK pokrywa do 80% kosztów przedsięwzięcia, jest oprocentowany na preferencyjnym poziomie ze stabilizacją około 2% rocznie, a okres kredytowania sięga nawet 50 lat. Udzielany jest na budowę lokali mieszkalnych na wynajem z limitowaną stawką czynszu.",
   },
   {
     q: "Czy nowa SIM bez historii kredytowej może dostać kredyt BGK?",

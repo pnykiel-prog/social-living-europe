@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 // Ustaw NEXT_PUBLIC_SITE_URL na docelową domenę produkcyjną (np. https://sociallivingeurope.com).
 // Domyślnie wskazuje na obecny adres wdrożenia.
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://social-living-europe.vercel.app"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://sociallivingeurope.com"
 ).replace(/\/$/, "");
 
 export const SITE_NAME = "Konsorcjum Social Living Europe";

@@ -516,7 +516,7 @@ select {
 /* ---------- Współpraca: układ porównawczy z centralnym zdjęciem ---------- */
 .coop-compare {
   display: grid;
-  grid-template-columns: 1fr clamp(260px, 26vw, 350px) 1fr;
+  grid-template-columns: 0.78fr clamp(210px, 19vw, 290px) 1.22fr;
   gap: clamp(28px, 4vw, 56px);
   align-items: start;
 }

@@ -62,27 +62,27 @@ export const forWhom = [
   {
     title: "Sektor prywatny",
     desc: "Deweloperzy, fundusze i firmy budowlane — Twoja inwestycja, nasz model, publiczne finansowanie.",
-    img: img("1454165804606-c3d57bc86b40", 700, 800),
+    img: "/assets/wsp-umowa-contract.jpg",
   },
   {
     title: "Samorządy",
     desc: "Gminy i spółki komunalne — zaspokajamy zapotrzebowanie mieszkaniowe bez obciążania budżetu.",
-    img: img("1487958449943-2429e8be8625", 700, 800),
+    img: "/assets/wsp-spotkanie-stol.jpg",
   },
   {
     title: "Duzi pracodawcy",
     desc: "Mieszkanie jako benefit — pracownik z mieszkaniem zostaje w regionie.",
-    img: img("1497366216548-37526070297c", 700, 800),
+    img: "/assets/wsp-prezentacja.jpg",
   },
   {
     title: "Instytucje finansowe",
     desc: "Fundusze ESG i impact investing — gotowe projekty z certyfikowanym impaktem.",
-    img: img("1551836022-d5d88e9218df", 700, 800),
+    img: "/assets/wsp-podpis-waga.jpg",
   },
   {
     title: "Organizacje pozarządowe",
     desc: "NGO i sektor społeczny — wiedza, sieć i głos zamienione w projekty.",
-    img: img("1517048676732-d65bc937f952", 700, 800),
+    img: "/assets/wsp-zebatki.jpg",
   },
 ];
 
@@ -228,7 +228,7 @@ export const finSources: FinSource[] = [
     headline: "Oprocentowanie 1–2% rocznie. Tenor do 50 lat. Do 80% kosztów.",
     tag: "1–2% · do 50 lat",
     dir: "row-reverse",
-    img: img("1486406146926-c627a92ad1ab", 1000, 800),
+    img: "/assets/wsp-umowa-contract.jpg",
     body: [
       "Kredyt SBC (Społeczne Budownictwo Czynszowe) udzielany przez Bank Gospodarstwa Krajowego to najtańsze dostępne w Polsce finansowanie inwestycji mieszkaniowych. Oprocentowanie stabilizowane jest na poziomie około 2% rocznie dzięki dopłacie z budżetu państwa — bez marży banku, spreadów i zmienności komercyjnej.",
       "Przy tenorze do 50 lat i finansowaniu do 80% kosztów, obsługa kredytu jest na tyle niska, że pozwala skalkulować czynsz regulowany poniżej stawek rynkowych i jednocześnie osiągać DSCR powyżej 1,0x. Żaden instrument komercyjny nie daje tej kombinacji.",
@@ -273,7 +273,7 @@ export const finSources: FinSource[] = [
     headline: "Do 65% kosztów inwestycji. Kapitał prywatny z mandatem ESG.",
     tag: "do 65%",
     dir: "row",
-    img: img("1551836022-d5d88e9218df", 1000, 800),
+    img: "/assets/wsp-podpis-waga.jpg",
     body: [
       "SLE PSA posiada dostęp do sieci funduszy z mandatem impact investing i affordable housing, które szukają ekspozycji na polskie budownictwo społeczne. Finansują projekty nie jako inwestorzy equity, lecz jako pożyczkodawcy hipoteczni — udzielając pożyczki zabezpieczonej hipoteką na portfelu, z miesięcznym kuponem odsetkowym i zwrotem kapitału przy wykupie lokali.",
       "Dla projektu to dostęp do kapitału prywatnego uzupełniającego lub zastępującego kredyt BGK — szczególnie wartościowego, gdy projekt nie kwalifikuje się do programu SBC lub gdy inwestor chce uruchomić projekt bez czekania na nabór wniosków BGK.",
@@ -288,7 +288,7 @@ export const finSources: FinSource[] = [
     headline: "Grunt, infrastruktura, wkład kapitałowy. Wartość niemierzalna na poziomie projektu.",
     tag: "grunt + infrastruktura",
     dir: "row-reverse",
-    img: img("1487958449943-2429e8be8625", 1000, 800),
+    img: "/assets/wsp-spotkanie-stol.jpg",
     body: [
       "Gmina w modelu budownictwa społecznego nie jest tylko partnerem administracyjnym. Jest aktywnym uczestnikiem finansowania — przez wniesienie gruntu w formie aportu lub prawa użytkowania wieczystego, zapewnienie infrastruktury technicznej (drogi, media, sieci) jako wkładu rzeczowego, objęcie udziałów w SIM jako udziałowiec mniejszościowy oraz złożenie wniosku o grant z Funduszu Dopłat jako beneficjent.",
       "Każda z tych form obniża koszt projektu dla inwestora prywatnego i zwiększa jego rentowność przy zachowaniu regulowanego czynszu. Grunt gminy wniesiony do projektu zamiast kupowanego po cenie rynkowej może samodzielnie zmienić ekonomikę całej inwestycji.",
@@ -360,7 +360,7 @@ export const modelsFull: ModelFull[] = [
     num: "04",
     title: "Program mieszkań pracowniczych",
     subtitle: "Mieszkanie jako benefit. Pracownik zostaje. Firma buduje lojalność.",
-    img: img("1497366216548-37526070297c", 1000, 800),
+    img: "/assets/wsp-prezentacja.jpg",
     dir: "row-reverse",
     body: [
       "Deficyt pracowników w wielu branżach przemysłowych, logistycznych i usługowych ma coraz częściej charakter nie płacowy, lecz mieszkaniowy. Pracownik z zewnątrz nie przyjedzie bez mieszkania. Pracownik, który mieszka w lokalu pracodawcy — zostaje.",
@@ -404,7 +404,7 @@ export const coop: CoopArea[] = [
     dir: "row",
     kicker: "Sektor prywatny",
     title: "Twoja inwestycja. Nasz model. Publiczne finansowanie.",
-    img: img("1486406146926-c627a92ad1ab", 1000, 800),
+    img: "/assets/wsp-umowa-contract.jpg",
     intro:
       "Deweloperzy, fundusze nieruchomości i firmy budowlane rzadko myślą o budownictwie społecznym jako o naturalnym rynku dla swoich projektów — zazwyczaj dlatego, że nie wiedzą, że regulowane czynsze, kredyt BGK i granty gminne mogą razem stworzyć model finansowy lepszy niż sprzedaż detaliczna. Szczególnie gdy projekt utknął, rynek się schłodził lub portfel mieszkań czeka na kupca, którego nie ma. Przeprowadzamy inwestora przez całą ścieżkę: od pierwszej analizy po uruchomienie operacyjne.",
     services: [
@@ -427,7 +427,7 @@ export const coop: CoopArea[] = [
     dir: "row-reverse",
     kicker: "Samorządy",
     title: "Zapotrzebowanie znasz. My wiemy, jak je zaspokoić — i jak za to zapłacić.",
-    img: img("1487958449943-2429e8be8625", 1000, 800),
+    img: "/assets/wsp-spotkanie-stol.jpg",
     intro:
       "Gminy borykają się z tym samym problemem od lat: środki publiczne na budownictwo mieszkaniowe są dostępne, ale brakuje gotowych projektów, kompetencji operacyjnych i czasu urzędników, żeby sprawnie przeprowadzić inwestycję od pomysłu do oddania kluczy. My rozwiązujemy dokładnie ten problem.",
     services: [
@@ -450,7 +450,7 @@ export const coop: CoopArea[] = [
     dir: "row",
     kicker: "Duzi pracodawcy",
     title: "Pracownik bez mieszkania nie przyjedzie. Pracownik z mieszkaniem zostaje.",
-    img: img("1497366216548-37526070297c", 1000, 800),
+    img: "/assets/wsp-prezentacja.jpg",
     intro:
       "Niedobory kadrowe w polskich zakładach pracy mają coraz częściej charakter nie płacowy, lecz infrastrukturalny. Szczególnie dotyczy to pracodawców zlokalizowanych poza dużymi aglomeracjami, w miejscowościach, gdzie rynek najmu prywatnego jest płytki lub nieistniejący. Mieszkanie staje się benefitem decydującym o tym, czy pracownik podejmie zatrudnienie i jak długo zostanie. Budujemy programy mieszkaniowe dla pracodawców od analizy potrzeb po oddanie kluczy — we współpracy z lokalną gminą i z dostępem do finansowania publicznego.",
     services: [
@@ -473,7 +473,7 @@ export const coop: CoopArea[] = [
     dir: "row-reverse",
     kicker: "Instytucje finansowe z impaktem społecznym",
     title: "Gotowe projekty. Certyfikowany impakt. Bezpieczna ekspozycja na polskim rynku.",
-    img: img("1551836022-d5d88e9218df", 1000, 800),
+    img: "/assets/wsp-podpis-waga.jpg",
     intro:
       "Fundusze impact investing, instytucje finansowe z mandatem ESG i podmioty wdrażające strategię CSRD szukają w Polsce ekspozycji na affordable housing — ale rzadko mają zasoby operacyjne, żeby samodzielnie identyfikować, strukturyzować i uruchamiać projekty zgodne z ich mandatem. SLE PSA jest tym zasobem.",
     services: [
@@ -496,7 +496,7 @@ export const coop: CoopArea[] = [
     dir: "row",
     kicker: "Organizacje pozarządowe i sektor społeczny",
     title: "Budownictwo społeczne potrzebuje wiedzy, sieci i głosu. NGO ma wszystkie trzy.",
-    img: img("1517048676732-d65bc937f952", 1000, 800),
+    img: "/assets/wsp-zebatki.jpg",
     intro:
       "Organizacje pozarządowe działające w obszarze mieszkalnictwa, wykluczenia społecznego, polityki senioralnej i rynku pracy mają coś, czego brakuje sektorowi prywatnemu: zaufanie społeczności lokalnych, dostęp do grup docelowych i zdolność do rzecznictwa. SLE PSA chce budować z NGO partnerstwo, które zamienia tę przewagę w konkretne projekty mieszkaniowe.",
     services: [
@@ -523,12 +523,13 @@ export const roleOptions = ["Inwestor", "JST", "Fundusz / bank", "Inny"];
 export const photos = {
   imgWhat: "/assets/bud-osiedle-dziedziniec.jpg",
   imgRevenue: "/assets/szkic-3d-wiezowce.jpg",
-  ctaImg: img("1454165804606-c3d57bc86b40", 1000, 1100),
+  ctaImg: "/assets/wsp-spotkanie-biuro.jpg",
   aboutHero: img("1486325212027-8081e485255e", 1600, 900),
   finHeroSide: "/assets/bud-wiezowiec-niebo.jpg",
   modHero: "/assets/bud-osiedle-zielen.jpg",
-  coopHero: img("1521737604893-d14cc237f11d", 1800, 900),
+  coopHero: "/assets/wsp-puzzle-rece.jpg",
   finFooter: "/assets/rysunek-projektowy.jpg",
   modCta: "/assets/szkic-3d-budynek.jpg",
   onasCta: "/assets/spotkanie-biznes.jpg",
+  coopCta: "/assets/wsp-doradztwo-dokument.jpg",
 };

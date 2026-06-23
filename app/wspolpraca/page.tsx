@@ -137,7 +137,7 @@ export default function Wspolpraca() {
         heading="Nie wiesz, od czego zacząć?"
         text="Większość rozmów, które prowadzimy, zaczyna się od jednego pytania: czy mój projekt lub moja sytuacja w ogóle nadaje się do budownictwa społecznego? Odpowiedź zajmuje nam jedną rozmowę."
         buttonLabel="Umów rozmowę"
-        image={photos.ctaImg}
+        image={photos.coopCta}
         maxWidth={640}
         imageOpacity={0.45}
       />

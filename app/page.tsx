@@ -26,10 +26,12 @@ export default function Home() {
           overflow: "hidden",
         }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/assets/hero-green.png"
-          alt=""
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/assets/hero-green.png"
           style={{
             position: "absolute",
             inset: 0,
@@ -38,7 +40,9 @@ export default function Home() {
             objectFit: "cover",
             opacity: 0.7,
           }}
-        />
+        >
+          <source src="/assets/hero.mp4" type="video/mp4" />
+        </video>
         <div
           style={{
             position: "absolute",

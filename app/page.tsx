@@ -22,35 +22,29 @@ export default function Home() {
           minHeight: "86vh",
           display: "flex",
           alignItems: "center",
-          background: "#01060d",
+          background: "#0c241b",
           overflow: "hidden",
         }}
       >
-        {/* Wideo jako tło hero — bezpośrednie dziecko sekcji, tak jak działające wcześniej zdjęcie */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          poster="/assets/hero-poster.jpg"
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/assets/hero-city.jpg"
+          alt=""
           style={{
             position: "absolute",
             inset: 0,
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            opacity: 0.7,
+            objectPosition: "center bottom",
           }}
-        >
-          <source src="/assets/hero.mp4" type="video/mp4" />
-        </video>
+        />
         <div
           style={{
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(90deg,rgba(1,8,15,.9) 0%,rgba(1,8,15,.55) 45%,rgba(1,8,15,.12) 100%)",
+              "linear-gradient(90deg,rgba(1,30,22,.88) 0%,rgba(1,30,22,.55) 45%,rgba(1,30,22,.15) 100%)",
           }}
         />
         <div className="container" style={{ position: "relative" }}>

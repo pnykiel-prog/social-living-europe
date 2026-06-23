@@ -593,8 +593,8 @@ export const faqFinansowanie: FaqItem[] = [
     a: "Od 1 stycznia 2026 roku nowo tworzone SIM-y, TBS-y i spółdzielnie, które nie mają jeszcze historii kredytowej ani dodatkowego zabezpieczenia wymaganego przez prawo bankowe, mogą uzyskać gwarancję InvestEU Komisji Europejskiej. To otwiera im drogę do preferencyjnego finansowania BGK.",
   },
   {
-    q: "Jakie są dostępne środki BGK w 2026 roku?",
-    a: "W 2026 roku BGK ma przeznaczone na kredyty SBC rekordowe środki w kwocie ponad 2 miliardów złotych. W poprzednich latach popyt znacząco przekraczał podaż środków — w tym roku środków powinno wystarczyć dla większości inwestorów.",
+    q: "Jakie środki na budownictwo społeczne są dostępne w najbliższych latach?",
+    a: "W latach 2027–2030 na finansowanie budownictwa społecznego i komunalnego planowane jest około 34 mld zł. To wyjątkowe okno finansowe — środków powinno wystarczyć dla większości dobrze przygotowanych projektów. Im wcześniej projekt jest przygotowany pod nowe zasady, tym większa szansa na ich pozyskanie.",
   },
 ];
 

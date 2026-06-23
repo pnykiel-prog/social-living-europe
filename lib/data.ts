@@ -394,6 +394,7 @@ export type CoopArea = {
   kicker: string;
   title: string;
   img: string;
+  stat: { value: string; text: string };
   intro: string;
   services: { t: string; d: string }[];
 };
@@ -405,6 +406,7 @@ export const coop: CoopArea[] = [
     kicker: "Sektor prywatny",
     title: "Twoja inwestycja. Nasz model. Publiczne finansowanie.",
     img: "/assets/wsp-umowa-contract.jpg",
+    stat: { value: "9,3 mln", text: "Tylu Polaków żyje dziś w luce czynszowej. To największy niezagospodarowany rynek mieszkaniowy w Polsce — z gwarantowanym popytem i publicznym finansowaniem czekającym na prywatnego operatora." },
     intro:
       "Deweloperzy, fundusze nieruchomości i firmy budowlane rzadko myślą o budownictwie społecznym jako o naturalnym rynku dla swoich projektów — zazwyczaj dlatego, że nie wiedzą, że regulowane czynsze, kredyt BGK i granty gminne mogą razem stworzyć model finansowy lepszy niż sprzedaż detaliczna. Szczególnie gdy projekt utknął, rynek się schłodził lub portfel mieszkań czeka na kupca, którego nie ma. Przeprowadzamy inwestora przez całą ścieżkę: od pierwszej analizy po uruchomienie operacyjne.",
     services: [
@@ -428,6 +430,7 @@ export const coop: CoopArea[] = [
     kicker: "Samorządy",
     title: "Zapotrzebowanie znasz. My wiemy, jak je zaspokoić — i jak za to zapłacić.",
     img: "/assets/wsp-spotkanie-stol.jpg",
+    stat: { value: "4 mld zł", text: "Tyle czeka na gminy w Funduszu Dopłat w 2026 roku. Większość środków nie jest wykorzystywana — nie z braku potrzeb, lecz z braku gotowych projektów. My przynosimy projekt, finansowanie i obsługę. Gmina wskazuje potrzeby." },
     intro:
       "Gminy borykają się z tym samym problemem od lat: środki publiczne na budownictwo mieszkaniowe są dostępne, ale brakuje gotowych projektów, kompetencji operacyjnych i czasu urzędników, żeby sprawnie przeprowadzić inwestycję od pomysłu do oddania kluczy. My rozwiązujemy dokładnie ten problem.",
     services: [
@@ -451,6 +454,7 @@ export const coop: CoopArea[] = [
     kicker: "Duzi pracodawcy",
     title: "Pracownik bez mieszkania nie przyjedzie. Pracownik z mieszkaniem zostaje.",
     img: "/assets/wsp-prezentacja.jpg",
+    stat: { value: "47%", text: "Tyle polskich firm zgłasza poważne problemy z rotacją kadr. Każde odejście kosztuje równowartość 3–9 miesięcy wynagrodzenia. Mieszkanie jako benefit to jedyna rzecz, której nie da się skopiować kartą sportową." },
     intro:
       "Niedobory kadrowe w polskich zakładach pracy mają coraz częściej charakter nie płacowy, lecz infrastrukturalny. Szczególnie dotyczy to pracodawców zlokalizowanych poza dużymi aglomeracjami, w miejscowościach, gdzie rynek najmu prywatnego jest płytki lub nieistniejący. Mieszkanie staje się benefitem decydującym o tym, czy pracownik podejmie zatrudnienie i jak długo zostanie. Budujemy programy mieszkaniowe dla pracodawców od analizy potrzeb po oddanie kluczy — we współpracy z lokalną gminą i z dostępem do finansowania publicznego.",
     services: [
@@ -474,6 +478,7 @@ export const coop: CoopArea[] = [
     kicker: "Instytucje finansowe z impaktem społecznym",
     title: "Gotowe projekty. Certyfikowany impakt. Bezpieczna ekspozycja na polskim rynku.",
     img: "/assets/wsp-podpis-waga.jpg",
+    stat: { value: "+49%", text: "O tyle wzrosły aktywa polskich funduszy ESG w 2025 roku — do poziomu 33,85 mld zł. Budownictwo społeczne łączy zabezpieczenie hipoteczne, regularny cashflow i certyfikowany impakt SDG 11. Dostarczamy gotowe projekty." },
     intro:
       "Fundusze impact investing, instytucje finansowe z mandatem ESG i podmioty wdrażające strategię CSRD szukają w Polsce ekspozycji na affordable housing — ale rzadko mają zasoby operacyjne, żeby samodzielnie identyfikować, strukturyzować i uruchamiać projekty zgodne z ich mandatem. SLE PSA jest tym zasobem.",
     services: [
@@ -497,6 +502,7 @@ export const coop: CoopArea[] = [
     kicker: "Organizacje pozarządowe i sektor społeczny",
     title: "Budownictwo społeczne potrzebuje wiedzy, sieci i głosu. NGO ma wszystkie trzy.",
     img: "/assets/wsp-zebatki.jpg",
+    stat: { value: "35%", text: "Tyle polskich gospodarstw domowych nie jest w stanie wynająć ani kupić odpowiedniego mieszkania bez pomocy. NGO zna tę grupę lepiej niż ktokolwiek inny. My zamieniamy tę wiedzę w projekty." },
     intro:
       "Organizacje pozarządowe działające w obszarze mieszkalnictwa, wykluczenia społecznego, polityki senioralnej i rynku pracy mają coś, czego brakuje sektorowi prywatnemu: zaufanie społeczności lokalnych, dostęp do grup docelowych i zdolność do rzecznictwa. SLE PSA chce budować z NGO partnerstwo, które zamienia tę przewagę w konkretne projekty mieszkaniowe.",
     services: [

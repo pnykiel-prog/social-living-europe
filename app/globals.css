@@ -517,10 +517,31 @@ select {
 .coop-compare {
   display: grid;
   grid-template-columns: 0.82fr clamp(180px, 15vw, 250px) 1.18fr;
+  grid-template-areas:
+    "intro photo services"
+    "stat  stat  services";
   gap: clamp(28px, 4vw, 56px);
   align-items: start;
 }
+.coop-intro {
+  grid-area: intro;
+}
+.coop-services {
+  grid-area: services;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.coop-stat {
+  grid-area: stat;
+  align-self: start;
+  background: var(--dark);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  padding: clamp(26px, 3vw, 38px);
+}
 .coop-photo {
+  grid-area: photo;
   position: relative;
   width: 100%;
   aspect-ratio: 3 / 5;
@@ -609,11 +630,15 @@ select {
 @media (max-width: 900px) {
   .coop-compare {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo"
+      "intro"
+      "stat"
+      "services";
     max-width: 640px;
     margin: 0 auto;
   }
   .coop-photo {
-    order: -1;
     aspect-ratio: 16 / 10;
     max-height: 440px;
   }

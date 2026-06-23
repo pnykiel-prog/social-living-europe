@@ -98,9 +98,9 @@ export default function Wspolpraca() {
                 <div style={{ height: 3, width: 60, background: "var(--gold)", borderRadius: 2, margin: "20px auto 0" }} />
               </div>
 
-              {/* układ porównawczy: kontekst | zdjęcie | usługi */}
+              {/* układ porównawczy: kontekst | zdjęcie | usługi, ze statystyką pod spodem */}
               <div className="coop-compare">
-                <div>
+                <div className="coop-intro">
                   <h3 className="serif" style={{ fontWeight: 600, fontSize: "clamp(20px,2.2vw,27px)", lineHeight: 1.22, color: "var(--dark)", margin: "0 0 16px" }}>
                     {co.title}
                   </h3>
@@ -116,7 +116,7 @@ export default function Wspolpraca() {
                   />
                 </div>
 
-                <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
+                <div className="coop-services">
                   {co.services.map((sv) => (
                     <div key={sv.t} style={{ borderLeft: "3px solid var(--gold-dark)", paddingLeft: 18 }}>
                       <h4 className="serif" style={{ fontWeight: 600, fontSize: 17.5, color: "var(--dark)", margin: "0 0 8px", lineHeight: 1.28 }}>
@@ -125,6 +125,13 @@ export default function Wspolpraca() {
                       <p style={{ fontSize: 14.5, lineHeight: 1.62, color: "var(--muted-2)", margin: 0 }}>{sv.d}</p>
                     </div>
                   ))}
+                </div>
+
+                <div className="coop-stat">
+                  <div className="serif" style={{ fontSize: "clamp(38px,5vw,60px)", fontWeight: 600, color: "var(--gold)", lineHeight: 1, marginBottom: 14 }}>
+                    {co.stat.value}
+                  </div>
+                  <p style={{ fontSize: 15, lineHeight: 1.62, color: "rgba(255,255,255,.85)", margin: 0 }}>{co.stat.text}</p>
                 </div>
               </div>
             </div>

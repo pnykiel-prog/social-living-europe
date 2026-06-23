@@ -26,23 +26,29 @@ export default function Home() {
           overflow: "hidden",
         }}
       >
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/assets/hero-poster.jpg"
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            opacity: 0.7,
-          }}
-        >
-          <source src="/assets/hero.mp4" type="video/mp4" />
-        </video>
+        <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/assets/hero-poster.jpg"
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%,-50%)",
+              minWidth: "100%",
+              minHeight: "100%",
+              width: "auto",
+              height: "auto",
+              objectFit: "cover",
+              opacity: 0.7,
+            }}
+          >
+            <source src="/assets/hero.mp4" type="video/mp4" />
+          </video>
+        </div>
         <div
           style={{
             position: "absolute",

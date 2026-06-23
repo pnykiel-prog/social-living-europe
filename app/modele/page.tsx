@@ -211,7 +211,7 @@ export default function Modele() {
         heading="Nie wiesz, który model pasuje do Twojego projektu?"
         text="Każda inwestycja jest inna. Odpowiedni model zależy od lokalizacji, stanu zaawansowania projektu, dostępnego kapitału i oczekiwanego horyzontu zwrotu. Umów bezpłatną konsultację — w ciągu jednej rozmowy określimy, który wariant ma dla Ciebie sens i jakie są kolejne kroki."
         buttonLabel="Umów bezpłatną konsultację"
-        image={photos.ctaImg}
+        image={photos.modCta}
         maxWidth={660}
         imageWidth="40%"
         imageOpacity={0.4}

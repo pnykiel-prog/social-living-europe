@@ -317,7 +317,7 @@ export const modelsFull: ModelFull[] = [
     num: "01",
     title: "SIM / TBS — Społeczna Inicjatywa Mieszkaniowa",
     subtitle: "Instytucjonalny operator taniego najmu z preferencyjnym finansowaniem państwowym",
-    img: img("1545324418-cc1a3fa10c00", 1000, 800),
+    img: "/assets/bud-balkony-bialy.jpg",
     dir: "row",
     body: [
       "SIM to najsilniej wspierany przez państwo model budownictwa społecznego w Polsce. Daje dostęp do preferencyjnego kredytu BGK przy oprocentowaniu stabilizowanym na poziomie 2% rocznie, bezzwrotnych grantów z Funduszu Dopłat oraz — od 2026 roku — gwarancji InvestEU eliminującej barierę braku historii kredytowej dla nowych podmiotów.",
@@ -331,7 +331,7 @@ export const modelsFull: ModelFull[] = [
     num: "02",
     title: "Zakup przez wynajem",
     subtitle: "Własne mieszkanie w horyzoncie 25–50 lat z preferencyjnym finansowaniem",
-    img: img("1560448204-e02f11c3d0e2", 1000, 800),
+    img: "/assets/bud-kamienica-balkony.jpg",
     dir: "row-reverse",
     body: [
       "Długoterminowy instrument dojścia do własności dla osób, które dziś nie mogą kupić mieszkania za gotówkę ani uzyskać kredytu hipotecznego na warunkach rynkowych. Uczestnik wchodzi do programu z opłatą wstępną, płaci miesięczną ratę i po uzgodnionym okresie — od 25 do 50 lat — staje się pełnoprawnym właścicielem lokalu.",
@@ -527,12 +527,14 @@ export const roleOptions = ["Inwestor", "JST", "Fundusz / bank", "Inny"];
 // ---------- Zdjęcia hero / sekcji ----------
 
 export const photos = {
-  imgWhat: img("1486406146926-c627a92ad1ab", 1000, 900),
-  imgRevenue: img("1497366216548-37526070297c", 1000, 900),
+  imgWhat: "/assets/bud-osiedle-dziedziniec.jpg",
+  imgRevenue: "/assets/szkic-3d-wiezowce.jpg",
   ctaImg: img("1454165804606-c3d57bc86b40", 1000, 1100),
   aboutHero: img("1486325212027-8081e485255e", 1600, 900),
-  finHeroSide: img("1554224155-6726b3ff858f", 1100, 1200),
-  modHero: img("1545324418-cc1a3fa10c00", 1800, 1100),
+  finHeroSide: "/assets/bud-wiezowiec-niebo.jpg",
+  modHero: "/assets/bud-osiedle-zielen.jpg",
   coopHero: img("1521737604893-d14cc237f11d", 1800, 900),
-  finFooter: img("1551836022-d5d88e9218df", 1000, 900),
+  finFooter: "/assets/rysunek-projektowy.jpg",
+  modCta: "/assets/szkic-3d-budynek.jpg",
+  onasCta: "/assets/spotkanie-biznes.jpg",
 };

@@ -334,7 +334,7 @@ export default function ONas() {
         heading="Doradzimy na każdym etapie projektu"
         text="Od pierwszej analizy wykonalności po zarządzanie realizacją — sprawdź, jak możemy pomóc Twojej organizacji."
         buttonLabel="Porozmawiajmy o współpracy"
-        image={photos.imgRevenue}
+        image={photos.onasCta}
       />
     </div>
   );

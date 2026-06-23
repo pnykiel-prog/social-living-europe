@@ -628,6 +628,6 @@ export const faqOnas: FaqItem[] = [
   },
   {
     q: "W jakich miastach działacie?",
-    a: "Aktualnie koncentrujemy się na aglomeracji śląskiej — Katowice, Chorzów, Sosnowiec i okolice. Rozmawiamy o projektach w całym regionie oraz selektywnie w innych częściach Polski. Napisz do nas — ocenimy, czy Twoja lokalizacja wpisuje się w nasze plany.",
+    a: "Działamy na terenie całej Polski. Realizujemy i analizujemy projekty budownictwa społecznego niezależnie od regionu — od dużych aglomeracji po mniejsze gminy. Napisz do nas — ocenimy wykonalność Twojego projektu w Twojej lokalizacji.",
   },
 ];

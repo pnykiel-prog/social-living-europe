@@ -1,6 +1,7 @@
 import { Eyebrow, Quote, CtaSection } from "@/components/ui";
+import Faq from "@/components/Faq";
 import { pageMeta } from "@/lib/site";
-import { modelsFull, quoteKtbs, photos } from "@/lib/data";
+import { modelsFull, quoteKtbs, photos, faqModele } from "@/lib/data";
 
 export const metadata = pageMeta({
   title: "Modele",
@@ -208,6 +209,8 @@ export default function Modele() {
           ))}
         </div>
       </section>
+
+      <Faq items={faqModele} title="O budownictwie społecznym" />
 
       {/* STOPKA SEKCJI */}
       <CtaSection

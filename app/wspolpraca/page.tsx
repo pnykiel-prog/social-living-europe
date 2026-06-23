@@ -1,6 +1,7 @@
 import { Eyebrow, CtaSection } from "@/components/ui";
+import Faq from "@/components/Faq";
 import { pageMeta } from "@/lib/site";
-import { coop, photos } from "@/lib/data";
+import { coop, photos, faqWspolpraca } from "@/lib/data";
 
 export const metadata = pageMeta({
   title: "Współpraca",
@@ -139,6 +140,8 @@ export default function Wspolpraca() {
           ))}
         </div>
       </section>
+
+      <Faq items={faqWspolpraca} title="Dla samorządów" />
 
       {/* STOPKA SEKCJI */}
       <CtaSection

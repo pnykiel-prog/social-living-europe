@@ -539,3 +539,95 @@ export const photos = {
   onasCta: "/assets/spotkanie-biznes.jpg",
   coopCta: "/assets/wsp-doradztwo-dokument.jpg",
 };
+
+// ---------- FAQ (rozmieszczone tematycznie na podstronach) ----------
+
+export type FaqItem = { q: string; a: string };
+
+export const faqModele: FaqItem[] = [
+  {
+    q: "Czym różni się SIM od TBS?",
+    a: "Praktycznie niczym — SIM (Społeczna Inicjatywa Mieszkaniowa) to nowa nazwa TBS (Towarzystwo Budownictwa Społecznego) po nowelizacji ustawy z 2021 roku. Obie formy to spółki not-for-profit budujące mieszkania na wynajem z regulowanym czynszem, finansowane preferencyjnym kredytem BGK. Różnica jest przede wszystkim w możliwości szerszego udziału partnerów — SIM może współpracować z wieloma gminami jednocześnie.",
+  },
+  {
+    q: "Dla kogo są mieszkania w SIM/TBS?",
+    a: "Dla osób i rodzin, które zarabiają za dużo na klasyczne mieszkanie komunalne, ale jednocześnie zbyt mało, by bezpiecznie kupić własne lokum na kredyt albo wynajmować je długo na warunkach czysto rynkowych. To segment środka rynku — klasa pracująca, osoby na umowach B2B, młodzi pracownicy bez historii kredytowej.",
+  },
+  {
+    q: "Ile wynosi czynsz w SIM?",
+    a: "Czynsz w TBS/SIM jest ustawowo ograniczony do 4–5% wartości odtworzeniowej lokalu rocznie. W praktyce w większych miastach stawka wynosi średnio około 25 zł za m² miesięcznie. Dla mieszkania 50 m² oznacza to orientacyjnie 1 000–1 250 zł miesięcznie — znacznie mniej niż wynajem rynkowy, który za podobny lokal może kosztować 2 000–2 800 zł.",
+  },
+  {
+    q: "Co to jest partycypacja i czy jest zwrotna?",
+    a: "Partycypacja to udział w kosztach budowy lokalu mieszkalnego. Najemca albo inny uprawniony podmiot wnosi określoną kwotę, która pomaga sfinansować inwestycję, a w zamian uzyskuje określoną pozycję w systemie najmu. Partycypacja nie jest opłatą bezzwrotną — po zakończeniu najmu i wyprowadzce otrzymujesz ją z powrotem po waloryzacji. To zamrożenie kapitału, a nie jego strata.",
+  },
+  {
+    q: "Czy można wykupić mieszkanie z SIM na własność?",
+    a: "Od 1 stycznia 2022 roku najemcy z partycypacją co najmniej 20% — w dużych miastach 25% — mogą ubiegać się o najem z dojściem do własności. Po spłaceniu przez SIM kredytu inwestycyjnego masz możliwość wykupu mieszkania, a partycypacja zalicza się na poczet ceny.",
+  },
+  {
+    q: "Czy można połączyć kredyt BGK z grantem z Funduszu Dopłat?",
+    a: "Tak — w ramach realizacji jednej inwestycji mieszkaniowej można łączyć preferencyjny kredyt z programu SBC ze środkami uzyskanymi przez gminę w ramach programu BSK. To standardowy montaż finansowy, który Konsorcjum SLE strukturyzuje dla swoich klientów.",
+  },
+];
+
+export const faqFinansowanie: FaqItem[] = [
+  {
+    q: "Czy moja inwestycja może zostać przekształcona w budownictwo społeczne?",
+    a: "Zależy od stanu zaawansowania. Niedokończona budowa, budynek w stanie surowym, budynek do rewitalizacji lub adaptacji — wszystkie te scenariusze mogą kwalifikować się do finansowania BGK. Gotowy budynek mieszkalny bez planowanych prac dostosowawczych jest trudniejszy do zakwalifikowania. Pierwszym krokiem jest bezpłatna analiza wstępna, którą przeprowadzamy dla każdego projektu.",
+  },
+  {
+    q: "Czy muszę zakładać SIM samodzielnie?",
+    a: "Nie. Inwestor prywatny nie może być udziałowcem SIM — jest to zastrzeżone dla gmin i KZN. Możesz jednak wejść w projekt jako: właściciel gruntu sprzedający działkę SIM, generalny wykonawca realizujący budowę, operator platformy zarządzający portfelem lub fundusz finansujący inwestycję. Konsorcjum SLE projektuje te relacje umowne.",
+  },
+  {
+    q: "Jak długo trwa projekt od pierwszej rozmowy do oddania lokali?",
+    a: "Standardowy czas od podpisania LOI do uruchomienia środków BGK to 12–16 tygodni. Faza budowy to kolejne 18–36 miesięcy w zależności od skali projektu. Łącznie od decyzji do zasiedlenia — 2–4 lata przy nowej budowie, 6–18 miesięcy przy przejęciu istniejącego budynku do adaptacji.",
+  },
+  {
+    q: "Ile wynosi kredyt BGK i na jakich warunkach?",
+    a: "Preferencyjny kredyt BGK pokrywa do 80% kosztów przedsięwzięcia, jest oprocentowany na poziomie WIBOR 3M bez marży ze stabilizacją na poziomie 2% rocznie na okres 5 lat i udzielany na budowę lokali mieszkalnych na wynajem z limitowaną stawką czynszu.",
+  },
+  {
+    q: "Czy nowa SIM bez historii kredytowej może dostać kredyt BGK?",
+    a: "Od 1 stycznia 2026 roku nowo tworzone SIM-y, TBS-y i spółdzielnie, które nie mają jeszcze historii kredytowej ani dodatkowego zabezpieczenia wymaganego przez prawo bankowe, mogą uzyskać gwarancję InvestEU Komisji Europejskiej. To otwiera im drogę do preferencyjnego finansowania BGK.",
+  },
+  {
+    q: "Jakie są dostępne środki BGK w 2026 roku?",
+    a: "W 2026 roku BGK ma przeznaczone na kredyty SBC rekordowe środki w kwocie ponad 2 miliardów złotych. W poprzednich latach popyt znacząco przekraczał podaż środków — w tym roku środków powinno wystarczyć dla większości inwestorów.",
+  },
+];
+
+export const faqWspolpraca: FaqItem[] = [
+  {
+    q: "Czy gmina musi angażować własny budżet?",
+    a: "Nie musi, choć wniesienie wkładu — w formie gruntu, infrastruktury lub objęcia udziałów w SIM — wzmacnia projekt i poprawia scoring w BGK. Grant z Funduszu Dopłat wypłacany jest gminie, która następnie przekazuje go operatorowi jako udział w kosztach. Faktyczny wydatek gminy może wynosić zero, jeśli wkład zostanie pokryty wartością gruntu lub infrastruktury.",
+  },
+  {
+    q: "Czy gmina ponosi ryzyko, jeśli projekt się nie powiedzie?",
+    a: "Gmina jako beneficjent grantu z Funduszu Dopłat odpowiada za prawidłowe wydatkowanie środków przez okres 25 lat od rozliczenia kosztów. Jeśli SIM zmieni przeznaczenie lokali, gmina jest zobowiązana do zwrotu grantu z odsetkami. To ryzyko jest minimalizowane przez odpowiednią umowę z operatorem, którą Konsorcjum SLE przygotowuje standardowo.",
+  },
+  {
+    q: "Jak długo trwa analiza zapotrzebowania na lokale w gminie?",
+    a: "Standardowe badanie zapotrzebowania, obejmujące migrację wewnętrzną i zewnętrzną oraz preferencje mieszkaniowe, trwa 6–10 tygodni. Wynikiem jest gotowy raport z rekomendacją liczby, metrażu i lokalizacji lokali — bezpośrednia podstawa do złożenia wniosku o finansowanie.",
+  },
+];
+
+export const faqOnas: FaqItem[] = [
+  {
+    q: "Czym dokładnie zajmuje się Konsorcjum SLE?",
+    a: "Jesteśmy doradcą, integratorem i operatorem projektów budownictwa społecznego. Przeprowadzamy klientów przez cały proces: od analizy projektu, przez strukturyzację finansowania i relacje z gminą i BGK, po zarządzanie portfelem przez cały czas trwania programu. Nie jesteśmy deweloperem ani wykonawcą — jesteśmy partnerem, który spina interesy wszystkich stron.",
+  },
+  {
+    q: "Czy Konsorcjum SLE może sfinansować projekt w 100%?",
+    a: "W wybranych projektach spełniających nasze kryteria — tak. Łączymy instrumenty publiczne (kredyt BGK, granty, Fundusz Dopłat) z kapitałem prywatnych funduszy inwestycyjnych, do których mamy dostęp. Dokładny montaż zależy od projektu, lokalizacji i profilu inwestora. Oceniamy to na pierwszej konsultacji.",
+  },
+  {
+    q: "Jak wygląda pierwsza konsultacja i ile kosztuje?",
+    a: "Pierwsza konsultacja jest bezpłatna i trwa 45–60 minut. Oceniamy wstępnie projekt lub potrzeby klienta, wskazujemy, który model może mieć sens, i zarysowujemy możliwy montaż finansowy. Bez zobowiązań, bez dokumentacji na start.",
+  },
+  {
+    q: "W jakich miastach działacie?",
+    a: "Aktualnie koncentrujemy się na aglomeracji śląskiej — Katowice, Chorzów, Sosnowiec i okolice. Rozmawiamy o projektach w całym regionie oraz selektywnie w innych częściach Polski. Napisz do nas — ocenimy, czy Twoja lokalizacja wpisuje się w nasze plany.",
+  },
+];

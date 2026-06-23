@@ -1,6 +1,7 @@
 import { Eyebrow, Quote, CtaSection } from "@/components/ui";
+import Faq from "@/components/Faq";
 import { pageMeta } from "@/lib/site";
-import { finSources, quoteDelowski, photos } from "@/lib/data";
+import { finSources, quoteDelowski, photos, faqFinansowanie } from "@/lib/data";
 
 export const metadata = pageMeta({
   title: "Finansowanie",
@@ -172,6 +173,8 @@ export default function Finansowanie() {
           ))}
         </div>
       </section>
+
+      <Faq items={faqFinansowanie} title="Dla deweloperów i inwestorów" variant="white" />
 
       {/* STOPKA SEKCJI */}
       <CtaSection

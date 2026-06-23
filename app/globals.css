@@ -574,6 +574,57 @@ select {
   box-shadow: 0 30px 70px -42px rgba(1, 30, 22, 0.55);
 }
 
+/* ---------- FAQ (accordion <details>) ---------- */
+.faq-list {
+  border-top: 1px solid var(--border-2);
+}
+.faq-item {
+  border-bottom: 1px solid var(--border-2);
+}
+.faq-q {
+  display: block;
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  padding: 22px 48px 22px 0;
+  font-family: var(--font-newsreader), serif;
+  font-weight: 600;
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.34;
+  color: var(--dark);
+  transition: color 0.15s;
+}
+.faq-q:hover {
+  color: var(--brand);
+}
+.faq-q::-webkit-details-marker {
+  display: none;
+}
+.faq-q::after {
+  content: "+";
+  position: absolute;
+  right: 4px;
+  top: 18px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--gold-dark);
+}
+.faq-item[open] .faq-q::after {
+  content: "–";
+}
+.faq-a {
+  padding: 0 48px 26px 0;
+  font-size: 15.5px;
+  line-height: 1.74;
+  color: var(--muted);
+}
+
 /* ---------- Responsive ---------- */
 
 /* Small laptop / large tablet: switch to hamburger, thin out 5-col grids */

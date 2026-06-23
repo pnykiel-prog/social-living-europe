@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Eyebrow, Quote, CtaSection } from "@/components/ui";
+import Faq from "@/components/Faq";
 import { pageMeta } from "@/lib/site";
-import { skala, celCards, competencies, values, photos } from "@/lib/data";
+import { skala, celCards, competencies, values, photos, faqOnas } from "@/lib/data";
 
 export const metadata = pageMeta({
   title: "O nas",
@@ -329,6 +330,8 @@ export default function ONas() {
           </div>
         </div>
       </section>
+
+      <Faq items={faqOnas} title="O Konsorcjum SLE" variant="white" />
 
       {/* CTA */}
       <CtaSection

@@ -275,7 +275,7 @@ export const finSources: FinSource[] = [
     dir: "row",
     img: "/assets/wsp-podpis-waga.jpg",
     body: [
-      "SLE PSA posiada dostęp do sieci funduszy z mandatem impact investing i affordable housing, które szukają ekspozycji na polskie budownictwo społeczne. Finansują projekty nie jako inwestorzy equity, lecz jako pożyczkodawcy hipoteczni — udzielając pożyczki zabezpieczonej hipoteką na portfelu, z miesięcznym kuponem odsetkowym i zwrotem kapitału przy wykupie lokali.",
+      "Konsorcjum SLE posiada dostęp do sieci funduszy z mandatem impact investing i affordable housing, które szukają ekspozycji na polskie budownictwo społeczne. Finansują projekty nie jako inwestorzy equity, lecz jako pożyczkodawcy hipoteczni — udzielając pożyczki zabezpieczonej hipoteką na portfelu, z miesięcznym kuponem odsetkowym i zwrotem kapitału przy wykupie lokali.",
       "Dla projektu to dostęp do kapitału prywatnego uzupełniającego lub zastępującego kredyt BGK — szczególnie wartościowego, gdy projekt nie kwalifikuje się do programu SBC lub gdy inwestor chce uruchomić projekt bez czekania na nabór wniosków BGK.",
       "Fundusze z mandatem SFDR Art. 9 i SDG 11 kwalifikują polskie projekty budownictwa społecznego jako zgodne ze swoim mandatem. W wybranych projektach spełniających kryteria możliwe jest pokrycie nawet 100% kosztów z kombinacji środków publicznych i kapitału funduszowego — bez własnego wkładu dewelopera lub inwestora.",
     ],
@@ -292,7 +292,7 @@ export const finSources: FinSource[] = [
     body: [
       "Gmina w modelu budownictwa społecznego nie jest tylko partnerem administracyjnym. Jest aktywnym uczestnikiem finansowania — przez wniesienie gruntu w formie aportu lub prawa użytkowania wieczystego, zapewnienie infrastruktury technicznej (drogi, media, sieci) jako wkładu rzeczowego, objęcie udziałów w SIM jako udziałowiec mniejszościowy oraz złożenie wniosku o grant z Funduszu Dopłat jako beneficjent.",
       "Każda z tych form obniża koszt projektu dla inwestora prywatnego i zwiększa jego rentowność przy zachowaniu regulowanego czynszu. Grunt gminy wniesiony do projektu zamiast kupowanego po cenie rynkowej może samodzielnie zmienić ekonomikę całej inwestycji.",
-      "Relacja z gminą jest też kluczem do środków publicznych — bez umowy z gminą nie ma grantu z Funduszu Dopłat, a bez Funduszu Dopłat montaż się nie domyka. Budowanie tej relacji i strukturyzacja wkładu gminy to jeden z kluczowych obszarów kompetencji SLE PSA.",
+      "Relacja z gminą jest też kluczem do środków publicznych — bez umowy z gminą nie ma grantu z Funduszu Dopłat, a bez Funduszu Dopłat montaż się nie domyka. Budowanie tej relacji i strukturyzacja wkładu gminy to jeden z kluczowych obszarów kompetencji Konsorcjum SLE.",
     ],
     forWho:
       "Każdy projekt w systemie SIM lub w formule inwestora zewnętrznego z umową art. 5. Szczególnie wartościowe dla inwestorów bez własnego gruntu lub z ograniczonym kapitałem własnym.",
@@ -440,11 +440,11 @@ export const coop: CoopArea[] = [
       },
       {
         t: "Kompleksowa obsługa całej inwestycji",
-        d: "Gmina podejmuje decyzję o realizacji projektu i określa oczekiwaną liczbę lokali. Resztą zajmujemy się my. Planujemy inwestycję, strukturyzujemy finansowanie publiczne i prywatne, zarządzamy procesem budowlanym i oddajemy gminie uzgodnioną liczbę gotowych lokali w określonym terminie. Gmina nie angażuje własnego budżetu ponad niezbędne minimum — finansowanie pochodzi z instrumentów publicznych i kapitału SLE PSA lub funduszy, z którymi współpracujemy. Gmina zyskuje zasób mieszkaniowy. My zyskujemy projekt.",
+        d: "Gmina podejmuje decyzję o realizacji projektu i określa oczekiwaną liczbę lokali. Resztą zajmujemy się my. Planujemy inwestycję, strukturyzujemy finansowanie publiczne i prywatne, zarządzamy procesem budowlanym i oddajemy gminie uzgodnioną liczbę gotowych lokali w określonym terminie. Gmina nie angażuje własnego budżetu ponad niezbędne minimum — finansowanie pochodzi z instrumentów publicznych i kapitału Konsorcjum SLE lub funduszy, z którymi współpracujemy. Gmina zyskuje zasób mieszkaniowy. My zyskujemy projekt.",
       },
       {
         t: "Współpraca z lokalnymi pracodawcami w zakresie polityki mieszkaniowej",
-        d: "Gmina i lokalny pracodawca mają wspólny interes: przyciągnąć i zatrzymać pracowników w regionie. Łączymy ich w trójstronne partnerstwo — gmina wnosi grunt, finansowanie publiczne i mandat społeczny, pracodawca gwarancję popytu i często część finansowania, a SLE PSA strukturę i obsługę operacyjną. Efekt: gmina zyskuje mieszkańców i wpływy podatkowe, pracodawca pracowników z rozwiązanym problemem mieszkaniowym, a projekt najsilniejszy argument dla BGK i Funduszu Dopłat — udokumentowany popyt, zanim wbita zostanie pierwsza łopata.",
+        d: "Gmina i lokalny pracodawca mają wspólny interes: przyciągnąć i zatrzymać pracowników w regionie. Łączymy ich w trójstronne partnerstwo — gmina wnosi grunt, finansowanie publiczne i mandat społeczny, pracodawca gwarancję popytu i często część finansowania, a Konsorcjum SLE strukturę i obsługę operacyjną. Efekt: gmina zyskuje mieszkańców i wpływy podatkowe, pracodawca pracowników z rozwiązanym problemem mieszkaniowym, a projekt najsilniejszy argument dla BGK i Funduszu Dopłat — udokumentowany popyt, zanim wbita zostanie pierwsza łopata.",
       },
     ],
   },
@@ -464,7 +464,7 @@ export const coop: CoopArea[] = [
       },
       {
         t: "Rozmowy i współpraca z lokalnymi gminami",
-        d: "Program mieszkań pracowniczych wymaga partnerstwa z gminą — to gmina jest stroną systemu preferencyjnego finansowania BGK i beneficjentem grantu z Funduszu Dopłat. Prowadzimy te rozmowy jako pośrednik rozumiejący potrzeby zarówno pracodawcy, jak i samorządu. Budujemy model, w którym gmina zyskuje nowych mieszkańców i podatników, pracodawca zyskuje pracowników, a SLE PSA dostarcza projekt i finansowanie.",
+        d: "Program mieszkań pracowniczych wymaga partnerstwa z gminą — to gmina jest stroną systemu preferencyjnego finansowania BGK i beneficjentem grantu z Funduszu Dopłat. Prowadzimy te rozmowy jako pośrednik rozumiejący potrzeby zarówno pracodawcy, jak i samorządu. Budujemy model, w którym gmina zyskuje nowych mieszkańców i podatników, pracodawca zyskuje pracowników, a Konsorcjum SLE dostarcza projekt i finansowanie.",
       },
       {
         t: "Kompleksowa obsługa całej inwestycji",
@@ -480,7 +480,7 @@ export const coop: CoopArea[] = [
     img: "/assets/wsp-podpis-waga.jpg",
     stat: { value: "+49%", text: "O tyle wzrosły aktywa polskich funduszy ESG w 2025 roku — do poziomu 33,85 mld zł. Budownictwo społeczne łączy zabezpieczenie hipoteczne, regularny cashflow i certyfikowany impakt SDG 11. Dostarczamy gotowe projekty." },
     intro:
-      "Fundusze impact investing, instytucje finansowe z mandatem ESG i podmioty wdrażające strategię CSRD szukają w Polsce ekspozycji na affordable housing — ale rzadko mają zasoby operacyjne, żeby samodzielnie identyfikować, strukturyzować i uruchamiać projekty zgodne z ich mandatem. SLE PSA jest tym zasobem.",
+      "Fundusze impact investing, instytucje finansowe z mandatem ESG i podmioty wdrażające strategię CSRD szukają w Polsce ekspozycji na affordable housing — ale rzadko mają zasoby operacyjne, żeby samodzielnie identyfikować, strukturyzować i uruchamiać projekty zgodne z ich mandatem. Konsorcjum SLE jest tym zasobem.",
     services: [
       {
         t: "Gotowe projekty z impaktem społecznym",
@@ -488,7 +488,7 @@ export const coop: CoopArea[] = [
       },
       {
         t: "Gotowe modele społeczne we współpracy z ESG i CSRD",
-        d: "Przygotowujemy pełną dokumentację impaktu społecznego: zestaw mierzalnych KPI, metodologię pomiaru, roczny framework raportowania i dane wyjściowe do sprawozdań CSRD i ESG. Instytucja finansowa wchodząca w projekt z SLE PSA otrzymuje gotowy pakiet raportowy — nie musi budować go od zera ani angażować zewnętrznych doradców ESG.",
+        d: "Przygotowujemy pełną dokumentację impaktu społecznego: zestaw mierzalnych KPI, metodologię pomiaru, roczny framework raportowania i dane wyjściowe do sprawozdań CSRD i ESG. Instytucja finansowa wchodząca w projekt z Konsorcjum SLE otrzymuje gotowy pakiet raportowy — nie musi budować go od zera ani angażować zewnętrznych doradców ESG.",
       },
       {
         t: "Współpraca z sektorem prywatnym i publicznym",
@@ -504,7 +504,7 @@ export const coop: CoopArea[] = [
     img: "/assets/wsp-zebatki.jpg",
     stat: { value: "35%", text: "Tyle polskich gospodarstw domowych nie jest w stanie wynająć ani kupić odpowiedniego mieszkania bez pomocy. NGO zna tę grupę lepiej niż ktokolwiek inny. My zamieniamy tę wiedzę w projekty." },
     intro:
-      "Organizacje pozarządowe działające w obszarze mieszkalnictwa, wykluczenia społecznego, polityki senioralnej i rynku pracy mają coś, czego brakuje sektorowi prywatnemu: zaufanie społeczności lokalnych, dostęp do grup docelowych i zdolność do rzecznictwa. SLE PSA chce budować z NGO partnerstwo, które zamienia tę przewagę w konkretne projekty mieszkaniowe.",
+      "Organizacje pozarządowe działające w obszarze mieszkalnictwa, wykluczenia społecznego, polityki senioralnej i rynku pracy mają coś, czego brakuje sektorowi prywatnemu: zaufanie społeczności lokalnych, dostęp do grup docelowych i zdolność do rzecznictwa. Konsorcjum SLE chce budować z NGO partnerstwo, które zamienia tę przewagę w konkretne projekty mieszkaniowe.",
     services: [
       {
         t: "Centrum wiedzy budownictwa społecznego",

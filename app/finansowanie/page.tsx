@@ -56,7 +56,7 @@ export default function Finansowanie() {
             regulowanych umowach i wsparciu publicznym.
           </p>
           <p style={{ fontSize: 16.5, lineHeight: 1.75, color: "var(--muted)", margin: "0 0 16px" }}>
-            Inwestor wchodzący w budownictwo społeczne z SLE PSA wchodzi w model,
+            Inwestor wchodzący w budownictwo społeczne z Konsorcjum SLE wchodzi w model,
             w którym państwo — przez system dotacji, preferencyjnych kredytów i
             partycypacji publicznej — radykalnie obniża koszt kapitału i ryzyko
             inwestycyjne. W zamian akceptuje ograniczenia: regulowany czynsz, długi

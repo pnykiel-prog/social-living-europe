@@ -71,7 +71,7 @@ export default function Modele() {
             nie czeka.
           </p>
           <p style={{ fontSize: 16.5, lineHeight: 1.75, color: "var(--muted)", margin: "0 0 16px" }}>
-            SLE PSA to doradca i operator programów budownictwa społecznego z
+            Konsorcjum SLE to doradca i operator programów budownictwa społecznego z
             dostępem do prywatnych funduszy inwestycyjnych. W wybranych projektach
             możemy zapewnić finansowanie nawet do 100% wartości inwestycji —
             łącząc instrumenty publiczne (kredyt BGK, granty, Fundusz Dopłat) z

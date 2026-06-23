@@ -27,7 +27,7 @@ export default function Wspolpraca() {
               style={{ fontWeight: 400, fontStyle: "italic", fontSize: "clamp(18px,1.9vw,23px)", lineHeight: 1.5, color: "var(--muted)", margin: "0 0 8px" }}
             >
               „Budownictwo społeczne działa tylko wtedy, gdy właściwi partnerzy
-              siedzą przy jednym stole. SLE PSA jest łącznikiem między sektorem
+              siedzą przy jednym stole. Konsorcjum SLE jest łącznikiem między sektorem
               prywatnym, publicznym i finansowym.”
             </p>
           </div>
@@ -69,7 +69,7 @@ export default function Wspolpraca() {
             siedzą przy jednym stole.
           </p>
           <p style={{ fontSize: 16.5, lineHeight: 1.75, color: "var(--muted)", margin: "0 0 16px" }}>
-            SLE PSA nie jest deweloperem, funduszem ani urzędem. Jesteśmy
+            Konsorcjum SLE nie jest deweloperem, funduszem ani urzędem. Jesteśmy
             łącznikiem między sektorem prywatnym, publicznym i finansowym —
             operatorem, który rozumie język każdego z tych środowisk i potrafi
             zbudować strukturę, w której każda ze stron osiąga swój cel.

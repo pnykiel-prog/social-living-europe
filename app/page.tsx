@@ -449,7 +449,6 @@ export default function Home() {
           <div
             style={{
               position: "relative",
-              height: 440,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -459,7 +458,7 @@ export default function Home() {
             <img
               src={photos.imgRevenue}
               alt=""
-              style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }}
+              style={{ width: "100%", height: "auto", objectFit: "contain" }}
             />
           </div>
         </div>

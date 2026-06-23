@@ -69,12 +69,12 @@ export default function Footer() {
             Living Europe PSA. Wszelkie prawa zastrzeżone.
           </div>
           <div style={{ display: "flex", gap: 26 }}>
-            <span style={{ fontSize: 13, color: "rgba(255,255,255,.6)", cursor: "pointer" }}>
+            <Link href="/polityka-prywatnosci" style={{ fontSize: 13, color: "rgba(255,255,255,.6)" }}>
               Polityka prywatności
-            </span>
-            <span style={{ fontSize: 13, color: "rgba(255,255,255,.6)", cursor: "pointer" }}>
+            </Link>
+            <Link href="/regulamin" style={{ fontSize: 13, color: "rgba(255,255,255,.6)" }}>
               Regulamin
-            </span>
+            </Link>
           </div>
         </div>
       </div>

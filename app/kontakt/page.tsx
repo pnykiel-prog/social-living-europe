@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Eyebrow } from "@/components/ui";
 import { roleOptions } from "@/lib/data";
 
@@ -136,9 +137,9 @@ export default function Kontakt() {
               Administratorem danych osobowych jest Fundacja DivideYou. Dane z
               formularza będą przetwarzane wyłącznie w celu obsługi przesłanego
               zapytania. Szczegóły dotyczące przetwarzania danych znajdują się w{" "}
-              <span style={{ color: "var(--brand)", fontWeight: 600, textDecoration: "underline", cursor: "pointer" }}>
+              <Link href="/polityka-prywatnosci" style={{ color: "var(--brand)", fontWeight: 600, textDecoration: "underline" }}>
                 Polityce Prywatności
-              </span>
+              </Link>
               .
             </p>
           </form>

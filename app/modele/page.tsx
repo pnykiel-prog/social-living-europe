@@ -133,6 +133,7 @@ export default function Modele() {
             >
               {/* baner zdjęcia z numerem i tytułem */}
               <div
+                className="model-banner"
                 style={{
                   position: "relative",
                   height: "clamp(250px,32vw,370px)",
@@ -154,6 +155,7 @@ export default function Modele() {
                   }}
                 />
                 <div
+                  className="model-banner-cap"
                   style={{
                     position: "absolute",
                     left: 0,
@@ -165,7 +167,7 @@ export default function Modele() {
                     gap: "clamp(16px,2.6vw,30px)",
                   }}
                 >
-                  <div className="serif" style={{ fontSize: "clamp(46px,7vw,90px)", fontWeight: 600, color: "var(--gold)", lineHeight: 0.78 }}>
+                  <div className="model-banner-num serif" style={{ fontSize: "clamp(46px,7vw,90px)", fontWeight: 600, color: "var(--gold)", lineHeight: 0.78 }}>
                     {m.num}
                   </div>
                   <div>

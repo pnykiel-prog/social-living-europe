@@ -22,7 +22,7 @@ export default function Home() {
           minHeight: "86vh",
           display: "flex",
           alignItems: "center",
-          backgroundColor: "#012a1f",
+          backgroundColor: "#01060d",
           backgroundImage: "url('/assets/hero-poster.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -60,7 +60,7 @@ export default function Home() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(90deg,rgba(1,30,22,.93) 0%,rgba(1,30,22,.62) 44%,rgba(1,30,22,.12) 100%)",
+              "linear-gradient(90deg,rgba(1,8,15,.9) 0%,rgba(1,8,15,.55) 45%,rgba(1,8,15,.12) 100%)",
           }}
         />
         <div className="container" style={{ position: "relative" }}>

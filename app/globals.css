@@ -513,6 +513,29 @@ select {
   color: #fff;
 }
 
+/* ---------- Strona główna: szkielet budynku jako tło sekcji „jak zarabia” ---------- */
+.revenue-media {
+  position: relative;
+  align-self: stretch;
+}
+.revenue-bg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: clamp(560px, 62vw, 980px);
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+@media (max-width: 760px) {
+  .revenue-bg {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+}
+
 /* ---------- Współpraca: układ porównawczy z centralnym zdjęciem ---------- */
 .coop-compare {
   display: grid;

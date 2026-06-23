@@ -424,12 +424,19 @@ export default function Home() {
       </section>
 
       {/* JAK ZARABIA SIĘ W TYM MODELU */}
-      <section className="sec">
+      <section className="sec" style={{ overflow: "hidden" }}>
         <div
           className="container grid-2"
-          style={{ display: "grid", gridTemplateColumns: "1.05fr 1fr", gap: 64, alignItems: "center" }}
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1.05fr 1fr",
+            gap: 64,
+            alignItems: "center",
+            position: "relative",
+            minHeight: "clamp(380px,36vw,540px)",
+          }}
         >
-          <div>
+          <div style={{ position: "relative", zIndex: 1 }}>
             <Eyebrow label="Jak zarabia się w tym modelu" />
             <h2 className="h2" style={{ fontSize: "clamp(28px,3.6vw,42px)", color: "var(--dark)", margin: "0 0 20px" }}>
               To nie model „zbuduj i sprzedaj”, lecz zarabianie na całym procesie
@@ -446,20 +453,9 @@ export default function Home() {
               na sprzedaży lokali.
             </p>
           </div>
-          <div
-            style={{
-              position: "relative",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
+          <div className="revenue-media">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={photos.imgRevenue}
-              alt=""
-              style={{ width: "100%", height: "auto", objectFit: "contain" }}
-            />
+            <img className="revenue-bg" src={photos.imgRevenue} alt="" />
           </div>
         </div>
         <div className="container" style={{ marginTop: 56 }}>

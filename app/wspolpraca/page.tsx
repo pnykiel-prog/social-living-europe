@@ -136,6 +136,14 @@ export default function Wspolpraca() {
                     }}
                   />
                 </div>
+                <div className="coop-feature-img2" aria-hidden="true">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={co.img2}
+                    alt=""
+                    style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                </div>
                 <div className="coop-feature-card">
                   <h2 className="h2" style={{ fontSize: "clamp(25px,2.9vw,37px)", lineHeight: 1.14, color: "var(--dark)", margin: "0 0 16px" }}>
                     {co.title}

@@ -535,6 +535,24 @@ select {
   margin-left: 0; /* wariant z kartą po lewej */
   margin-right: auto;
 }
+/* wkomponowane drugie zdjęcie wypełniające róg po przeciwnej stronie karty */
+.coop-feature-img2 {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0; /* domyślnie karta po prawej → zdjęcie w lewym dolnym rogu */
+  width: 38%;
+  height: clamp(230px, 30vw, 360px);
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(120deg, #0a4632, #0d6346);
+  border: 6px solid #fff;
+  box-shadow: 0 30px 70px -42px rgba(1, 30, 22, 0.65);
+}
+.coop-feature.left .coop-feature-img2 {
+  left: auto;
+  right: 0; /* karta po lewej → zdjęcie w prawym dolnym rogu */
+}
 
 /* ---------- Responsive ---------- */
 
@@ -620,6 +638,9 @@ select {
     width: 100%;
     max-width: none;
     margin-top: -44px;
+  }
+  .coop-feature-img2 {
+    display: none; /* brak pustej przestrzeni przy karcie na pełną szerokość */
   }
 }
 

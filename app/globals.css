@@ -571,6 +571,9 @@ select {
   }
   .row-flex > * {
     width: 100%;
+    /* Reset flex so image columns keep their explicit height instead of
+       collapsing to flex-basis:0 once the row stacks vertically. */
+    flex: none !important;
   }
   .sec {
     padding: 64px 0;

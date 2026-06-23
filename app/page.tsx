@@ -30,6 +30,7 @@ export default function Home() {
           overflow: "hidden",
         }}
       >
+        {/* Tło hero: kadr miasta (background-cover) zawsze wypełnia sekcję; wideo gra na wierzchu */}
         <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
           <video
             autoPlay
@@ -40,13 +41,10 @@ export default function Home() {
             poster="/assets/hero-poster.jpg"
             style={{
               position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%,-50%)",
-              minWidth: "100%",
-              minHeight: "86vh",
+              top: 0,
+              left: 0,
               width: "100%",
-              height: "86vh",
+              height: "100%",
               objectFit: "cover",
               objectPosition: "center",
               opacity: 0.7,

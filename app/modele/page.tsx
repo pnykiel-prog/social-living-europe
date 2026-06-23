@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import { Eyebrow, Quote, CtaSection } from "@/components/ui";
+import { pageMeta } from "@/lib/site";
 import { modelsFull, quoteKtbs, photos } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title: "Modele — Konsorcjum Social Living Europe",
+export const metadata = pageMeta({
+  title: "Modele",
   description:
-    "Pięć gotowych modeli budownictwa społecznego do wdrożenia na Twojej inwestycji lub gruncie. Twój projekt. Nasze finansowanie. Gotowy model.",
-};
+    "Pięć gotowych modeli budownictwa społecznego do wdrożenia na Twojej inwestycji lub gruncie: SIM/TBS, zakup przez wynajem, program wiarygodności kredytowej, mieszkania pracownicze i budownictwo senioralne.",
+  path: "/modele",
+});
 
 export default function Modele() {
   return (

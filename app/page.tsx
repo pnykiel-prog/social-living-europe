@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Eyebrow, Quote, CtaSection } from "@/components/ui";
+import { pageMeta } from "@/lib/site";
 import {
   roles,
   whyNow,
@@ -11,6 +12,15 @@ import {
   quoteCzerniak,
   photos,
 } from "@/lib/data";
+
+export const metadata = pageMeta({
+  title:
+    "Konsorcjum Social Living Europe — finansowanie budownictwa społecznego",
+  description:
+    "Pomagamy sfinansować i zrealizować projekty budownictwa społecznego — łącząc sektor prywatny, samorządy i kapitał finansowy, z finansowaniem nawet do 100% ze środków publicznych i prywatnych.",
+  path: "/",
+  absoluteTitle: true,
+});
 
 export default function Home() {
   return (

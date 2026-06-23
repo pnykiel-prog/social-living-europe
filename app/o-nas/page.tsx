@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Eyebrow, Quote, CtaSection } from "@/components/ui";
+import { pageMeta } from "@/lib/site";
 import { skala, celCards, competencies, values, photos } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title: "O nas — Konsorcjum Social Living Europe",
+export const metadata = pageMeta({
+  title: "O nas",
   description:
     "Doradca, integrator i zarządca procesu — łączymy sektor prywatny, samorządy i kapitał finansowy w wykonalne projekty mieszkaniowe o realnym oddziaływaniu społecznym.",
-};
+  path: "/o-nas",
+});
 
 export default function ONas() {
   return (

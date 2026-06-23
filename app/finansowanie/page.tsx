@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import { Eyebrow, Quote, CtaSection } from "@/components/ui";
+import { pageMeta } from "@/lib/site";
 import { finSources, quoteDelowski, photos } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title: "Finansowanie — Konsorcjum Social Living Europe",
+export const metadata = pageMeta({
+  title: "Finansowanie",
   description:
-    "Sześć źródeł finansowania, które łączymy w jeden montaż — do 100% wartości inwestycji ze środków publicznych i prywatnych.",
-};
+    "Sześć źródeł finansowania, które łączymy w jeden montaż — do 100% wartości inwestycji ze środków publicznych i prywatnych: dotacja, kredyt BGK, partycypacja, wkład inwestora, fundusze ESG i partycypacja gminy.",
+  path: "/finansowanie",
+});
 
 export default function Finansowanie() {
   return (

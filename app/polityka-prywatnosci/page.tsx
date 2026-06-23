@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Eyebrow } from "@/components/ui";
+import { pageMeta } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Polityka prywatności — Konsorcjum Social Living Europe",
+export const metadata = pageMeta({
+  title: "Polityka prywatności",
   description:
     "Zasady przetwarzania danych osobowych i wykorzystywania plików cookies w serwisie Konsorcjum Social Living Europe.",
-};
+  path: "/polityka-prywatnosci",
+});
 
 const h2: React.CSSProperties = {
   fontSize: "clamp(22px,2.6vw,30px)",

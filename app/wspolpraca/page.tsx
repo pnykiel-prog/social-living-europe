@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import { Eyebrow, CtaSection } from "@/components/ui";
+import { pageMeta } from "@/lib/site";
 import { coop, photos } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title: "Współpraca — Konsorcjum Social Living Europe",
+export const metadata = pageMeta({
+  title: "Współpraca",
   description:
     "Właściwi partnerzy przy jednym stole. Pięć obszarów współpracy: sektor prywatny, samorządy, duzi pracodawcy, instytucje finansowe i organizacje pozarządowe.",
-};
+  path: "/wspolpraca",
+});
 
 export default function Wspolpraca() {
   return (

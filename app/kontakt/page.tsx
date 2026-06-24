@@ -6,12 +6,39 @@ import { Eyebrow } from "@/components/ui";
 import { roleOptions } from "@/lib/data";
 
 export default function Kontakt() {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [error, setError] = useState("");
   const [role, setRole] = useState<string | null>(null);
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
+    if (status === "sending") return;
+    const form = e.currentTarget;
+    setStatus("sending");
+    setError("");
+    const payload: Record<string, string> = Object.fromEntries(
+      new FormData(form).entries()
+    ) as Record<string, string>;
+    payload.role = role || "";
+    try {
+      const res = await fetch("/api/kontakt", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (res.ok && json.ok) {
+        setStatus("sent");
+        form.reset();
+        setRole(null);
+      } else {
+        setStatus("error");
+        setError(json.error || "Nie udało się wysłać wiadomości.");
+      }
+    } catch {
+      setStatus("error");
+      setError("Brak połączenia. Spróbuj ponownie za chwilę.");
+    }
   };
 
   return (
@@ -39,6 +66,15 @@ export default function Kontakt() {
           style={{ display: "grid", gridTemplateColumns: "1.35fr 1fr", gap: 64, alignItems: "start" }}
         >
           <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 22 }}>
+            {/* honeypot antyspamowy — ukryty przed użytkownikami */}
+            <input
+              type="text"
+              name="company"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+            />
             <div>
               <label style={{ display: "block", fontSize: 13, fontWeight: 600, color: "#3f4f49", marginBottom: 10 }}>
                 Reprezentuję
@@ -67,11 +103,11 @@ export default function Kontakt() {
             <div className="grid-2 grid-stack-sm field" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 22 }}>
               <div>
                 <label>Imię i nazwisko</label>
-                <input type="text" placeholder="Jan Kowalski" />
+                <input type="text" name="name" placeholder="Jan Kowalski" />
               </div>
               <div>
                 <label>E-mail</label>
-                <input type="email" placeholder="jan@firma.pl" required />
+                <input type="email" name="email" placeholder="jan@firma.pl" required />
               </div>
             </div>
 
@@ -82,23 +118,23 @@ export default function Kontakt() {
               <div className="grid-2 grid-stack-sm field" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 22 }}>
                 <div>
                   <label>Lokalizacja</label>
-                  <input type="text" placeholder="Miasto / gmina" />
+                  <input type="text" name="location" placeholder="Miasto / gmina" />
                 </div>
                 <div>
                   <label>Typ nieruchomości</label>
-                  <input type="text" placeholder="Grunt / budynek do adaptacji" />
+                  <input type="text" name="propertyType" placeholder="Grunt / budynek do adaptacji" />
                 </div>
                 <div>
                   <label>Liczba mieszkań</label>
-                  <input type="text" placeholder="np. 60" />
+                  <input type="text" name="units" placeholder="np. 60" />
                 </div>
                 <div>
                   <label>Szacowany koszt budowy / adaptacji</label>
-                  <input type="text" placeholder="np. 20 mln zł" />
+                  <input type="text" name="cost" placeholder="np. 20 mln zł" />
                 </div>
                 <div>
                   <label>Status rozmów z gminą</label>
-                  <select defaultValue="Brak rozmów">
+                  <select name="communeStatus" defaultValue="Brak rozmów">
                     <option>Brak rozmów</option>
                     <option>Wstępne rozmowy</option>
                     <option>Zaawansowane ustalenia</option>
@@ -107,7 +143,7 @@ export default function Kontakt() {
                 </div>
                 <div>
                   <label>Oczekiwany model</label>
-                  <select defaultValue="SIM / TBS">
+                  <select name="model" defaultValue="SIM / TBS">
                     <option>SIM / TBS</option>
                     <option>Rent-to-buy</option>
                     <option>Pracowniczy</option>
@@ -120,16 +156,26 @@ export default function Kontakt() {
 
             <div className="field">
               <label>Dodatkowe informacje</label>
-              <textarea rows={4} placeholder="Opisz krótko projekt i oczekiwania..." />
+              <textarea name="message" rows={4} placeholder="Opisz krótko projekt i oczekiwania..." />
             </div>
 
             <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap" }}>
-              <button type="submit" className="btn btn-brand" style={{ padding: "16px 36px", fontSize: 15 }}>
-                Wyślij zgłoszenie
+              <button
+                type="submit"
+                className="btn btn-brand"
+                disabled={status === "sending"}
+                style={{ padding: "16px 36px", fontSize: 15, opacity: status === "sending" ? 0.7 : 1 }}
+              >
+                {status === "sending" ? "Wysyłanie…" : "Wyślij zgłoszenie"}
               </button>
-              {sent && (
+              {status === "sent" && (
                 <span style={{ fontSize: 14.5, color: "var(--pos)", fontWeight: 600 }}>
-                  ✓ Dziękujemy! Odezwiemy się ze wstępną oceną.
+                  ✓ Dziękujemy! Wiadomość została wysłana — odezwiemy się ze wstępną oceną.
+                </span>
+              )}
+              {status === "error" && (
+                <span style={{ fontSize: 14.5, color: "#b3261e", fontWeight: 600 }}>
+                  {error}
                 </span>
               )}
             </div>

@@ -91,14 +91,25 @@ export async function POST(req: Request) {
         <p style="color:#46554f;margin-top:18px">Wysłano z formularza na stronie sociallivingeurope.com</p>
       </div>`;
 
-    await transporter.sendMail({
+    const info = await transporter.sendMail({
       from: `"Formularz — Social Living Europe" <${user}>`,
+      sender: user,
       to,
       replyTo: data.name ? `"${String(data.name)}" <${email}>` : email,
       subject: `Nowe zgłoszenie z formularza — ${String(data.name || email)}`,
       text,
       html,
     });
+
+    console.log(
+      "Formularz wysłany:",
+      JSON.stringify({
+        messageId: info.messageId,
+        accepted: info.accepted,
+        rejected: info.rejected,
+        response: info.response,
+      })
+    );
 
     return NextResponse.json({ ok: true });
   } catch (err) {

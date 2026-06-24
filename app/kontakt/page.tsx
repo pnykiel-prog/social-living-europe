@@ -8,7 +8,6 @@ import { roleOptions } from "@/lib/data";
 export default function Kontakt() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
-  const [debug, setDebug] = useState("");
   const [role, setRole] = useState<string | null>(null);
 
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -17,7 +16,6 @@ export default function Kontakt() {
     const form = e.currentTarget;
     setStatus("sending");
     setError("");
-    setDebug("");
     const payload: Record<string, string> = Object.fromEntries(
       new FormData(form).entries()
     ) as Record<string, string>;
@@ -31,7 +29,6 @@ export default function Kontakt() {
       const json = await res.json().catch(() => ({}));
       if (res.ok && json.ok) {
         setStatus("sent");
-        setDebug(`[${json.v || "?"}] ${JSON.stringify(json.info || {})}`);
         form.reset();
         setRole(null);
       } else {
@@ -182,11 +179,6 @@ export default function Kontakt() {
                 </span>
               )}
             </div>
-            {debug && (
-              <pre style={{ fontSize: 11, color: "var(--subtle-2)", background: "var(--gray-bg)", padding: "10px 12px", borderRadius: 4, overflowX: "auto", margin: 0 }}>
-                diagnostyka: {debug}
-              </pre>
-            )}
             <p style={{ fontSize: 12.5, lineHeight: 1.6, color: "var(--subtle-2)", margin: "6px 0 0", maxWidth: 560 }}>
               Administratorem danych osobowych jest Fundacja DivideYou. Dane z
               formularza będą przetwarzane wyłącznie w celu obsługi przesłanego

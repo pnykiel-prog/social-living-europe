@@ -112,15 +112,7 @@ export async function POST(req: Request) {
       })
     );
 
-    return NextResponse.json({
-      ok: true,
-      v: "diag-1",
-      info: {
-        accepted: info.accepted,
-        rejected: info.rejected,
-        response: info.response,
-      },
-    });
+    return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("Błąd wysyłki formularza:", err);
     return NextResponse.json(

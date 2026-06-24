@@ -42,6 +42,11 @@ export async function POST(req: Request) {
     const user = process.env.SMTP_USER || "office@sociallivingeurope.com";
     const pass = process.env.SMTP_PASSWORD;
     const to = process.env.CONTACT_TO || "office@sociallivingeurope.com";
+    // SMTP_SECURE jawnie nadpisuje; domyślnie: 465 = SSL (true), 587 = STARTTLS (false).
+    const secure =
+      process.env.SMTP_SECURE != null
+        ? process.env.SMTP_SECURE === "true"
+        : port === 465;
 
     if (!pass) {
       console.error("SMTP_PASSWORD nie jest ustawione.");
@@ -58,7 +63,7 @@ export async function POST(req: Request) {
     const transporter = nodemailer.createTransport({
       host,
       port,
-      secure: port === 465, // 465 = SSL, 587 = STARTTLS
+      secure,
       auth: { user, pass },
     });
 

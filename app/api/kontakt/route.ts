@@ -26,8 +26,8 @@ export async function POST(req: Request) {
   try {
     const data = await req.json().catch(() => ({}));
 
-    // Honeypot — boty wypełniają ukryte pole.
-    if (data.company) return NextResponse.json({ ok: true });
+    // Honeypot — boty wypełniają ukryte pole (nazwa spoza standardu autofill).
+    if (data.hp_field) return NextResponse.json({ ok: true, bot: true });
 
     const email = String(data.email || "").trim();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {

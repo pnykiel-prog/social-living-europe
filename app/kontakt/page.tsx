@@ -69,10 +69,10 @@ export default function Kontakt() {
           style={{ display: "grid", gridTemplateColumns: "1.35fr 1fr", gap: 64, alignItems: "start" }}
         >
           <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 22 }}>
-            {/* honeypot antyspamowy — ukryty przed użytkownikami */}
+            {/* honeypot antyspamowy — ukryty; nazwa spoza standardu autouzupełniania */}
             <input
               type="text"
-              name="company"
+              name="hp_field"
               tabIndex={-1}
               autoComplete="off"
               aria-hidden="true"

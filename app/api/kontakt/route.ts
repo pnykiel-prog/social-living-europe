@@ -29,6 +29,21 @@ export async function POST(req: Request) {
     // Honeypot — boty wypełniają ukryte pole (nazwa spoza standardu autofill).
     if (data.hp_field) return NextResponse.json({ ok: true, bot: true });
 
+    // Pułapka czasowa — odrzuć wysyłki bez znacznika czasu lub szybsze niż 2 s
+    // (boty wysyłają natychmiast; realny użytkownik wypełnia formularz dłużej).
+    const ts = Number(data.ts || 0);
+    if (!ts || Date.now() - ts < 2000) {
+      return NextResponse.json({ ok: true, bot: true });
+    }
+
+    // Zgoda RODO wymagana.
+    if (!data.consent) {
+      return NextResponse.json(
+        { ok: false, error: "Zaznacz zgodę na przetwarzanie danych osobowych." },
+        { status: 400 }
+      );
+    }
+
     const email = String(data.email || "").trim();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
       return NextResponse.json(

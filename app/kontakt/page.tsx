@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { Eyebrow } from "@/components/ui";
 import { roleOptions } from "@/lib/data";
@@ -9,6 +9,7 @@ export default function Kontakt() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
   const [role, setRole] = useState<string | null>(null);
+  const loadedAt = useRef(Date.now());
 
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -20,6 +21,7 @@ export default function Kontakt() {
       new FormData(form).entries()
     ) as Record<string, string>;
     payload.role = role || "";
+    payload.ts = String(loadedAt.current);
     try {
       const res = await fetch("/api/kontakt", {
         method: "POST",
@@ -158,6 +160,33 @@ export default function Kontakt() {
               <label>Dodatkowe informacje</label>
               <textarea name="message" rows={4} placeholder="Opisz krótko projekt i oczekiwania..." />
             </div>
+
+            <label
+              style={{
+                display: "flex",
+                gap: 11,
+                alignItems: "flex-start",
+                fontSize: 13,
+                lineHeight: 1.55,
+                color: "var(--muted)",
+                cursor: "pointer",
+              }}
+            >
+              <input
+                type="checkbox"
+                name="consent"
+                required
+                style={{ marginTop: 2, width: 17, height: 17, flex: "none", accentColor: "var(--brand)" }}
+              />
+              <span>
+                Wyrażam zgodę na przetwarzanie moich danych osobowych przez
+                Fundację DivideYou w celu obsługi przesłanego zapytania, zgodnie z{" "}
+                <Link href="/polityka-prywatnosci" style={{ color: "var(--brand)", fontWeight: 600, textDecoration: "underline" }}>
+                  Polityką prywatności
+                </Link>
+                . *
+              </span>
+            </label>
 
             <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap" }}>
               <button

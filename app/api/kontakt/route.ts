@@ -41,7 +41,8 @@ export async function POST(req: Request) {
     const port = Number(process.env.SMTP_PORT || 465);
     const user = process.env.SMTP_USER || "office@sociallivingeurope.com";
     const pass = process.env.SMTP_PASSWORD;
-    const to = process.env.CONTACT_TO || "office@sociallivingeurope.com";
+    // Adres odbiorcy na sztywno — niezależny od zmiennej CONTACT_TO.
+    const to = "office@sociallivingeurope.com";
     // SMTP_SECURE jawnie nadpisuje; domyślnie: 465 = SSL (true), 587 = STARTTLS (false).
     const secure =
       process.env.SMTP_SECURE != null
